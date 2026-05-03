@@ -201,48 +201,6 @@ Executar somente testes de autenticacao/reset:
 php artisan test --filter="PasswordResetTest"
 ```
 
-## Screenshots
-
-As capturas abaixo documentam o fluxo principal da aplicacao:
-
-### Login
-
-![Login](Login.PNG)
-
-### Criar Conta
-
-![Criar Conta](CriarConta.PNG)
-
-### Erro de Login
-
-![Erro de Login](ErroLogin.PNG)
-
-### Dashboard
-
-![Dashboard](Dashboard.PNG)
-
-### Nova Transacao
-
-![Nova Transacao](NovaTransação.PNG)
-
-### Lista de Transacoes
-
-![Transacoes](Transações.PNG)
-
-### Editar Transacao
-
-![Editar Transacao](EditarTransação.PNG)
-
-## Roadmap
-
-Proximas evolucoes recomendadas:
-
-- tema escuro (dark mode)
-- filtros avancados por categoria, faixa de valor e periodo personalizado
-- exportacao de dados (CSV/PDF)
-- dashboard com mais indicadores financeiros
-- pipeline CI para testes automatizados
-
 ## Autor
 
 Natan Da Luz
