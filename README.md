@@ -206,7 +206,7 @@ php artisan test --filter="PasswordResetTest"
 Natan Da Luz
 
 - E-mail: <mailto:natandaluz01@gmail.com>
-- 
+
 - LinkedIn: <https://www.linkedin.com/in/natandaluzdesenvolvedor/>
 
 ## Licenca
