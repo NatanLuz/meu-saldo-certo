@@ -24,7 +24,7 @@ O projeto foi estruturado para demonstrar boas praticas de desenvolvimento Larav
 
 ## Funcionalidades
 
-### Autenticacao
+### Autenticação
 
 - login, registro e logout com Laravel Breeze
 - recuperacao de senha por e-mail (SMTP/Mailtrap)
@@ -51,7 +51,7 @@ O projeto foi estruturado para demonstrar boas praticas de desenvolvimento Larav
 - categorias vinculadas por usuario
 - suporte ao fluxo de categorias no cadastro e edicao de transacoes
 
-## Stack Tecnologica
+## Stack Do Projeto
 
 - Laravel 12
 - PHP 8.2+
