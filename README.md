@@ -12,7 +12,7 @@ Meu Saldo Certo é uma aplicação financeira em Laravel para controle de receit
 
 O sistema permite acompanhar movimentações financeiras com autenticação, separação por usuário e visualização clara dos totais. Ele foi estruturado para demonstrar organização de código, boas práticas e uma interface refinada para portfólio.
 
-## Diferenciais do Projeto
+## Diferenciais
 
 - Filtro por período com opção personalizada
 - Dashboard com cálculo dinâmico de receitas, despesas e saldo
