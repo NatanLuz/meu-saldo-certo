@@ -10,7 +10,7 @@ Aplicação WEB de controle financeiro pessoal, desenvolvida com Laravel 12 e fo
 
 > Projeto orientado a produto real: autenticacao completa, isolamento por usuario, dashboard analitico e fluxo de transacoes com foco em manutencao e evolucao.
 
-## Visao Geral
+## Visão Geral
 
 Meu Saldo Certo e uma solucao para acompanhamento de receitas e despesas, com interface responsiva em portugues (pt-BR), autenticacao segura e painel financeiro com indicadores principais.
 
