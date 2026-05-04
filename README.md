@@ -125,13 +125,6 @@ Relacionamentos:
 - User 1:N Categories
 - Category 1:N Transactions
 
-## Roadmap
-
-- tema escuro
-- filtros avançados por categoria e faixa de valor
-- exportação CSV/PDF
-- mais indicadores no dashboard
-
 ## Autor
 
 Natan Da Luz
