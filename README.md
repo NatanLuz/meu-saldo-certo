@@ -193,6 +193,10 @@ Relacionamentos:
 Natan Da Luz
 
 - E-mail: <natandaluz01@gmail.com>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6c929b617f3a66ac3e5893f40887f1a61827511e
 - LinkedIn: <https://www.linkedin.com/in/natandaluzdesenvolvedor/>
 
 ## Licença
