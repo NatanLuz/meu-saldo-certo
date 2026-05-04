@@ -1,6 +1,6 @@
 # Meu Saldo Certo
 
-Aplicacao web de controle financeiro pessoal, desenvolvida com Laravel 12 e foco em experiencia de uso, organizacao de codigo e qualidade tecnica profissional.
+Aplicação WEB de controle financeiro pessoal, desenvolvida com Laravel 12 e foco em experiência de uso, organização de código e qualidade tecnica profissional.
 
 ![Laravel](https://img.shields.io/badge/Laravel-12%2B-red)
 ![PHP](https://img.shields.io/badge/PHP-8.2%2B-blue)
