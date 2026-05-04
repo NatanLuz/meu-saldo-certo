@@ -1,81 +1,41 @@
 # Meu Saldo Certo
 
-Aplicação WEB de controle financeiro pessoal, desenvolvida com Laravel 12 e foco em experiência de uso, organização de código e qualidade tecnica profissional.
+Meu Saldo Certo é uma aplicação financeira em Laravel para controle de receitas, despesas e saldo, com dashboard analítico, filtros por período e CRUD de transações. O foco do projeto é entregar uma interface limpa, responsiva e com aparência de produto real.
 
 ![Laravel](https://img.shields.io/badge/Laravel-12%2B-red)
 ![PHP](https://img.shields.io/badge/PHP-8.2%2B-blue)
-![Status](https://img.shields.io/badge/status-MVP%20Avancado-green)
-![Tests](https://img.shields.io/badge/tests-feature%20tests-brightgreen)
+![Tailwind](https://img.shields.io/badge/Tailwind%20CSS-3%2B-38BDF8)
+![Status](https://img.shields.io/badge/status-MVP%20Avançado-green)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
-
-> Projeto orientado a produto real: autenticacao completa, isolamento por usuario, dashboard analitico e fluxo de transacoes com foco em manutencao e evolucao.
 
 ## Visão Geral
 
-Meu Saldo Certo e uma solucao para acompanhamento de receitas e despesas, com interface responsiva em portugues (pt-BR), autenticacao segura e painel financeiro com indicadores principais.
+O sistema permite acompanhar movimentações financeiras com autenticação, separação por usuário e visualização clara dos totais. Ele foi estruturado para demonstrar organização de código, boas práticas e uma interface refinada para portfólio.
 
-O projeto foi estruturado para demonstrar boas praticas de desenvolvimento Laravel, incluindo:
+## Principais Funcionalidades
 
-- arquitetura MVC bem definida
-- validacao com Form Requests
-- autorizacao por ownership com Policies
-- testes automatizados para fluxos criticos
-- frontend com Blade, Tailwind CSS e Alpine.js
+- autenticação com login, cadastro e logout
+- recuperação de senha por e-mail
+- dashboard com totais de receitas, despesas e saldo
+- gráfico financeiro com Chart.js
+- filtro por período no dashboard
+- cadastro, edição, listagem e exclusão de transações
+- categorização das transações por usuário
+- validação e autorização por usuário autenticado
 
-## Funcionalidades
-
-### Autenticação
-
-- login, registro e logout com Laravel Breeze
-- recuperacao de senha por e-mail (SMTP/Mailtrap)
-- layout split-screen com branding e formulario
-- feedback visual de erro no login (banner + campos destacados)
-- estado de loading no botao de login com Alpine.js
-
-### Dashboard
-
-- total de receitas
-- total de despesas
-- saldo consolidado
-- grafico mensal (receitas x despesas) com Chart.js
-- filtro por periodo: ultimos 7 dias, ultimos 30 dias, mes atual e todos
-
-### Transações
-
-- CRUD completo (criar, listar, editar e excluir)
-- transacoes vinculadas ao usuario autenticado
-- filtros integrados para analise no dashboard
-
-### Categorias
-
-- categorias vinculadas por usuario
-- suporte ao fluxo de categorias no cadastro e edicao de transacoes
-
-## Stack Do Projeto
+## Tecnologias Utilizadas
 
 - Laravel 12
 - PHP 8.2+
 - Blade
 - Tailwind CSS
 - Alpine.js
-- Vite
 - Chart.js
-- SQLite (ambiente local)
+- Vite
+- SQLite em ambiente local
 - Laravel Breeze
-- PHPUnit (Feature Tests)
 
-## Arquitetura do Projeto
-
-O projeto segue MVC com separacao de responsabilidades:
-
-- Models: regras de dominio e relacionamentos
-- Controllers: orquestracao dos casos de uso
-- Form Requests: validacao de entrada
-- Policies: autorizacao por ownership
-- Views Blade: camada de apresentacao
-- Migrations e Seeders: evolucao e estado inicial do banco
-
-Estrutura principal:
+## Estrutura do Projeto
 
 ```text
 app/
@@ -88,55 +48,23 @@ app/
 database/
   migrations/
   seeders/
+public/
 resources/
   views/
 routes/
-  web.php
-  auth.php
 tests/
-  Feature/
 ```
 
-## Modelo de Dados
+## Como Executar
 
-Entidades principais:
-
-- `users`: usuarios autenticados
-- `categories`: categorias por usuario
-- `transactions`: lancamentos financeiros por usuario e categoria
-
-Relacionamentos:
-
-- User 1:N Transactions
-- User 1:N Categories
-- Category 1:N Transactions
-
-## Seguranca e Qualidade
-
-- isolamento por usuario em recursos financeiros
-- autorizacao com `TransactionPolicy`
-- validacao centralizada com Form Requests
-- protecao CSRF nativa do Laravel
-- testes de feature cobrindo fluxos criticos
-
-Exemplos de cenarios cobertos:
-
-- criacao de transacao valida
-- bloqueio de valor menor ou igual a zero
-- bloqueio de alteracao/exclusao por usuario nao dono
-- fluxo de recuperacao de senha
-- aplicacao de filtros por periodo
-
-## Setup Local (passo a passo)
-
-Pre-requisitos:
+### Pré-requisitos
 
 - PHP 8.2+
 - Composer
 - Node.js e npm
 - SQLite
 
-Instalacao:
+### Instalação
 
 ```bash
 git clone <url-do-repositorio>
@@ -147,68 +75,70 @@ npm install
 
 cp .env.example .env
 php artisan key:generate
-
-# Configure banco e SMTP no .env
 php artisan migrate --seed
 ```
 
-Configuracao de e-mail (Mailtrap):
-
-```dotenv
-MAIL_MAILER=smtp
-MAIL_HOST=sandbox.smtp.mailtrap.io
-MAIL_PORT=2525
-MAIL_USERNAME=seu_usuario_mailtrap
-MAIL_PASSWORD=sua_senha_mailtrap
-MAIL_ENCRYPTION=null
-MAIL_FROM_ADDRESS="no-reply@meusaldocerto.com"
-MAIL_FROM_NAME="Meu Saldo Certo"
-```
-
-## Execucao do projeto
-
-Em desenvolvimento, rode em dois terminais:
+### Rodar o projeto
 
 ```bash
-# Terminal 1
 php artisan serve --host=127.0.0.1 --port=8000
-
-# Terminal 2
 npm run dev
 ```
 
-Acesse:
+Depois acesse:
 
 - <http://127.0.0.1:8000>
 
 ## Testes
 
-Executar todos os testes:
-
 ```bash
 php artisan test
 ```
 
-Executar somente testes de transacoes:
+## Screenshots
 
-```bash
-php artisan test --filter="TransactionTest"
-```
+As imagens devem ficar na pasta `screenshots` na raiz do projeto.
 
-Executar somente testes de autenticacao/reset:
+### Dashboard
 
-```bash
-php artisan test --filter="PasswordResetTest"
-```
+![Dashboard](./screenshots/dashboard.png)
+
+### Transações
+
+![Transações](./screenshots/transactions.png)
+
+### Nova Transação
+
+![Nova Transação](./screenshots/new-transaction.png)
+
+## Banco de Dados
+
+Entidades principais:
+
+- `users`
+- `categories`
+- `transactions`
+
+Relacionamentos:
+
+- User 1:N Transactions
+- User 1:N Categories
+- Category 1:N Transactions
+
+## Roadmap
+
+- tema escuro
+- filtros avançados por categoria e faixa de valor
+- exportação CSV/PDF
+- mais indicadores no dashboard
 
 ## Autor
 
 Natan Da Luz
 
-- E-mail: <mailto:natandaluz01@gmail.com>
-
+- E-mail: <natandaluz01@gmail.com>
 - LinkedIn: <https://www.linkedin.com/in/natandaluzdesenvolvedor/>
 
-## Licenca
+## Licença
 
-Este projeto esta licenciado sob a licenca MIT.
+Projeto licenciado sob a licença MIT.
