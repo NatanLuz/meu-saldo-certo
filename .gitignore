@@ -1,0 +1,45 @@
+*.log
+.DS_Store
+Thumbs.db
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+auth.json
+
+# Dependency directories
+/vendor/
+/node_modules/
+
+# Build artifacts
+/public/build
+/public/hot
+/public/storage
+
+# Runtime/cache artifacts
+/.phpunit.result.cache
+/.phpunit.cache
+/bootstrap/cache/*.php
+/storage/*.key
+/storage/pail
+/storage/logs/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+
+# IDE/editor
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+.phpactor.json
+
+# Local VM config
+Homestead.json
+Homestead.yaml
+
+# Local utility scripts (do not publish)
+/scripts/
+/create_user.php
