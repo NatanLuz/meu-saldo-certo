@@ -1,6 +1,10 @@
 # Meu Saldo Certo
 
-Meu Saldo Certo é uma aplicação financeira em Laravel para controle de receitas, despesas e saldo, com dashboard analítico, filtros por período e CRUD de transações. O foco do projeto é entregar uma interface limpa, responsiva e com aparência de produto real.
+Meu Saldo Certo é uma aplicação financeira desenvolvida em Laravel para controle de receitas, despesas e saldo. O projeto foi construído com foco em clareza visual, organização de código e apresentação profissional, simulando a experiência de um produto real para portfólio.
+
+## Demo
+
+Em breve.
 
 ![Laravel](https://img.shields.io/badge/Laravel-12%2B-red)
 ![PHP](https://img.shields.io/badge/PHP-8.2%2B-blue)
@@ -10,48 +14,53 @@ Meu Saldo Certo é uma aplicação financeira em Laravel para controle de receit
 
 ## Visão Geral
 
-O sistema permite acompanhar movimentações financeiras com autenticação, separação por usuário e visualização clara dos totais. Ele foi estruturado para demonstrar organização de código, boas práticas e uma interface refinada para portfólio.
+O sistema permite registrar, consultar e analisar movimentações financeiras por usuário autenticado. A interface foi desenhada para priorizar leitura rápida de dados, previsibilidade de uso e uma apresentação consistente para recrutadores e portfólio.
 
-## Diferenciais
+## Objetivo do Projeto
 
-- Filtro por período com opção personalizada
-- Dashboard com cálculo dinâmico de receitas, despesas e saldo
-- Arquitetura organizada com Form Requests, Policies e separação de responsabilidades
-- Interface pensada como produto real, com UX simples, clara e responsiva
-- Dados isolados por usuário autenticado
+Este projeto foi desenvolvido com foco em simular um sistema financeiro real, aplicando boas práticas de desenvolvimento com Laravel, organização de código e atenção à experiência do usuário. O objetivo principal é demonstrar capacidade de construir uma aplicação completa, desde a modelagem de dados até a interface final.
+
+## Diferenciais do Projeto
+
+- Dashboard com agregação dinâmica de dados financeiros.
+- Filtro por período com atualização clara da interface.
+- Implementação de multi-tenant simples com isolamento por usuário.
+- Uso de Form Requests e Policies para validação e autorização.
+- Interface pensada como produto real, com UX limpa e responsiva.
+- Estrutura organizada seguindo boas práticas do Laravel.
 
 ## Principais Funcionalidades
 
-- Sistema completo de autenticação (login, registro, recuperação de senha)
-- Recuperação de senha por e-mail
-- dashboard com totais de receitas, despesas e saldo
-- gráfico financeiro com Chart.js
-- filtro por período no dashboard
-- cadastro, edição, listagem e exclusão de transações
-- categorização das transações por usuário
-- validação e autorização por usuário autenticado
+- Sistema completo de autenticação com login, registro e recuperação de senha.
+- Dashboard financeiro com totais consolidados e gráfico analítico.
+- Filtro por período para acompanhar o comportamento das finanças.
+- Cadastro, edição, listagem e exclusão de transações.
+- Classificação das movimentações em receitas e despesas.
+- Associação de categorias por usuário autenticado.
+- Validação de dados e autorização por políticas.
+- Seed inicial para facilitar a execução e validação do sistema em ambiente local.
 
 ## Regras de Negócio
 
-- Toda transação deve possuir uma categoria
-- Categorias são vinculadas ao usuário autenticado
-- Transações podem ser do tipo receita ou despesa
-- O tipo da categoria deve ser compatível com a transação
-- Os dados são isolados por usuário
+- Toda transação deve estar vinculada a uma categoria.
+- Categorias pertencem ao usuário autenticado.
+- Uma transação deve ser do tipo receita ou despesa.
+- O tipo da categoria precisa ser compatível com o tipo da transação.
+- Cada usuário visualiza apenas os próprios dados.
 
 ## Arquitetura
 
-O projeto segue o padrão MVC do Laravel, com separação clara de responsabilidades:
+O projeto segue o padrão MVC do Laravel com separação clara de responsabilidades:
 
-- Controllers: fluxo da aplicação
-- Form Requests: validação de dados
-- Policies: autorização por usuário
-- Models: regras de negócio e relacionamentos
-- Views (Blade): interface com Tailwind CSS
+- Controllers: orquestram o fluxo entre validação, modelos e views.
+- Form Requests: centralizam regras de validação e mantêm os controllers enxutos.
+- Policies: controlam autorização por usuário.
+- Models: concentram relacionamentos e parte das regras de domínio.
+- Views com Blade: entregam a camada de apresentação com Tailwind CSS.
 
-Essa organização facilita manutenção, escalabilidade e legibilidade do código.
+Essa estrutura facilita manutenção, evolução e leitura do código em cenários reais de produto.
 
-## Tecnologias Utilizadas
+## Stack Utilizada
 
 - Laravel 12
 - PHP 8.2+
@@ -73,11 +82,15 @@ app/
   Models/
   Policies/
   Support/
+bootstrap/
+config/
 database/
   migrations/
   seeders/
 public/
 resources/
+  css/
+  js/
   views/
 routes/
 tests/
@@ -106,9 +119,9 @@ php artisan key:generate
 php artisan migrate --seed
 ```
 
-O seeder cria um usuário de teste e dados iniciais.
+O seeder cria um usuário de teste e dados iniciais para facilitar a validação local do sistema.
 
-### Rodar o projeto
+### Rodando o projeto
 
 ```bash
 npm run dev
@@ -127,25 +140,31 @@ php artisan test
 
 ## Screenshots
 
-As imagens devem ficar na pasta `screenshots` na raiz do projeto.
+A pasta `Screenshots` foi incluída no projeto para documentar visualmente as principais telas e reforçar a apresentação do sistema.
+
+### Login
+
+Tela de autenticação de usuário.
+
+![Login](../Screenshots/Login.PNG)
 
 ### Dashboard
 
 Resumo financeiro com gráfico e filtro por período.
 
-![Dashboard](./screenshots/dashboard.png)
+![Dashboard](../Screenshots/Dashboard.PNG)
 
 ### Transações
 
 Lista de movimentações com ações de cadastro, edição e exclusão.
 
-![Transações](./screenshots/transactions.png)
+![Transações](../Screenshots/TeladeTransações.PNG)
 
 ### Nova Transação
 
 Formulário para registrar uma nova movimentação financeira.
 
-![Nova Transação](./screenshots/new-transaction.png)
+![Nova Transação](../Screenshots/NovaTransação.PNG)
 
 ## Banco de Dados
 
@@ -161,18 +180,20 @@ Relacionamentos:
 - User 1:N Categories
 - Category 1:N Transactions
 
-## Melhorias Futuras (Atualizações que irei Desenvolver)
+## Melhorias Futuras
 
-- Exportação de relatório em PDF
-- Sistema de insights Financeiros
-- Filtros mais avançados por categoria
-- Deploy em ambiente de produção
+- Exportação de relatório em PDF.
+- Sistema de insights financeiros.
+- Filtros mais avançados por categoria e faixa de valor.
+- Deploy em ambiente de produção.
+- Painel com métricas adicionais e comparativos mensais.
 
 ## Autor
 
 Natan Da Luz
 
 - E-mail: <natandaluz01@gmail.com>
+
 - LinkedIn: <https://www.linkedin.com/in/natandaluzdesenvolvedor/>
 
 ## Licença
