@@ -12,16 +12,44 @@ Meu Saldo Certo é uma aplicação financeira em Laravel para controle de receit
 
 O sistema permite acompanhar movimentações financeiras com autenticação, separação por usuário e visualização clara dos totais. Ele foi estruturado para demonstrar organização de código, boas práticas e uma interface refinada para portfólio.
 
+## Diferenciais do Projeto
+
+- Filtro por período com opção personalizada
+- Dashboard com cálculo dinâmico de receitas, despesas e saldo
+- Arquitetura organizada com Form Requests, Policies e separação de responsabilidades
+- Interface pensada como produto real, com UX simples, clara e responsiva
+- Dados isolados por usuário autenticado
+
 ## Principais Funcionalidades
 
-- autenticação com login, cadastro e logout
-- recuperação de senha por e-mail
+- Sistema completo de autenticação (login, registro, recuperação de senha)
+- Recuperação de senha por e-mail
 - dashboard com totais de receitas, despesas e saldo
 - gráfico financeiro com Chart.js
 - filtro por período no dashboard
 - cadastro, edição, listagem e exclusão de transações
 - categorização das transações por usuário
 - validação e autorização por usuário autenticado
+
+## Regras de Negócio
+
+- Toda transação deve possuir uma categoria
+- Categorias são vinculadas ao usuário autenticado
+- Transações podem ser do tipo receita ou despesa
+- O tipo da categoria deve ser compatível com a transação
+- Os dados são isolados por usuário
+
+## Arquitetura
+
+O projeto segue o padrão MVC do Laravel, com separação clara de responsabilidades:
+
+- Controllers: fluxo da aplicação
+- Form Requests: validação de dados
+- Policies: autorização por usuário
+- Models: regras de negócio e relacionamentos
+- Views (Blade): interface com Tailwind CSS
+
+Essa organização facilita manutenção, escalabilidade e legibilidade do código.
 
 ## Tecnologias Utilizadas
 
@@ -78,11 +106,13 @@ php artisan key:generate
 php artisan migrate --seed
 ```
 
+O seeder cria um usuário de teste e dados iniciais.
+
 ### Rodar o projeto
 
 ```bash
-php artisan serve --host=127.0.0.1 --port=8000
 npm run dev
+php artisan serve --host=127.0.0.1 --port=8000
 ```
 
 Depois acesse:
@@ -101,13 +131,19 @@ As imagens devem ficar na pasta `screenshots` na raiz do projeto.
 
 ### Dashboard
 
+Resumo financeiro com gráfico e filtro por período.
+
 ![Dashboard](./screenshots/dashboard.png)
 
 ### Transações
 
+Lista de movimentações com ações de cadastro, edição e exclusão.
+
 ![Transações](./screenshots/transactions.png)
 
 ### Nova Transação
+
+Formulário para registrar uma nova movimentação financeira.
 
 ![Nova Transação](./screenshots/new-transaction.png)
 
@@ -124,6 +160,13 @@ Relacionamentos:
 - User 1:N Transactions
 - User 1:N Categories
 - Category 1:N Transactions
+
+## Melhorias Futuras (Atualizações que irei Desenvolver)
+
+- Exportação de relatório em PDF
+- Sistema de insights Financeiros
+- Filtros mais avançados por categoria
+- Deploy em ambiente de produção
 
 ## Autor
 
