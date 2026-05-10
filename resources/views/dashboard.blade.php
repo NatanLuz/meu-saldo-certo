@@ -41,7 +41,7 @@
             <!-- Cards sobre o financeiro  -->
             <div class="grid w-full grid-cols-1 gap-4 md:grid-cols-3">
                 <div class="rounded-xl border border-slate-200 bg-white px-5 py-4 shadow-sm transition hover:shadow-md">
-                    <p class="text-xs uppercase tracking-wide text-slate-430">Saldo</p>
+                    <p class="text-xs uppercase tracking-wide text-slate-400">Saldo</p>
                     <p class="mt-2 text-3xl font-bold leading-none tracking-tight {{ $balance >= 0 ? 'text-green-600' : 'text-red-600' }}">
                         {{ formatCurrency($balance) }}
                     </p>
@@ -58,14 +58,14 @@
                 </div>
             </div>
 
-                <div class="mt-10 overflow-hidden rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition duration-200 hover:shadow-md">
+                <div class="mt-8 overflow-hidden rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition duration-200 hover:shadow-md">
                 <div class="flex items-start justify-between gap-4">
                     <div>
                         <h3 class="text-lg font-semibold text-slate-900">Receitas e Despesas</h3>
                         <p class="mt-1 text-sm text-slate-500">Resumo financeiro do período.</p>
                     </div>
                 </div>
-                <div class="mt-6 w-full min-h-[280px] md:min-h-[320px] lg:min-h-[360px]">
+                <div class="mt-6 w-full min-h-[220px] md:min-h-[260px] lg:min-h-[300px]">
                     <canvas id="financeChart" class="w-full h-full"></canvas>
                 </div>
             </div>
@@ -135,20 +135,20 @@
                             data: monthlyData.income,
                             backgroundColor: theme.income,
                             borderRadius: 8,
-                            barThickness: 28,
-                            maxBarThickness: 40,
-                            barPercentage: 0.72,
-                            categoryPercentage: 0.68,
+                            barThickness: 40,
+                            maxBarThickness: 56,
+                            barPercentage: 0.88,
+                            categoryPercentage: 0.78,
                         },
                         {
                             label: 'Despesas',
                             data: monthlyData.expense,
                             backgroundColor: theme.expense,
                             borderRadius: 8,
-                            barThickness: 28,
-                            maxBarThickness: 40,
-                            barPercentage: 0.72,
-                            categoryPercentage: 0.68,
+                            barThickness: 40,
+                            maxBarThickness: 56,
+                            barPercentage: 0.88,
+                            categoryPercentage: 0.78,
                         },
                     ],
                 },

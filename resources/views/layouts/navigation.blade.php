@@ -1,24 +1,19 @@
 <nav x-data="{ open: false }" class="border-b border-gray-200 bg-white">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="relative flex justify-between h-16">
-            <div class="flex">
+        <div class="relative flex h-16 items-center justify-between gap-6">
+            <div class="flex min-w-0 items-center gap-8">
                 <!-- Logo e nome do projeto -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}" class="flex items-center gap-3">
                         <div class="flex items-center">
                             <x-application-logo class="h-9 w-auto" />
                         </div>
-                        <span class="hidden text-sm font-semibold tracking-tight text-green-600 md:block">
-                            Meu Saldo Certo
-                        </span>
                     </a>
                 </div>
 
-
-
                 <!-- links de navegação -->
-                <div class="hidden items-center space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                <div class="hidden items-center space-x-8 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         Painel
                     </x-nav-link>
@@ -29,8 +24,8 @@
 
             </div>
 
-            <!-- Brand inline between links and user (desktop) -->
-                <div class="hidden sm:flex items-center ms-6 me-6">
+            <!-- Brand central como no layout final do print -->
+            <div class="hidden sm:flex items-center justify-center flex-1 px-6">
                 <span class="text-base font-bold tracking-tight text-green-600 md:text-lg">Meu Saldo Certo</span>
             </div>
 

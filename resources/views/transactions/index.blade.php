@@ -1,43 +1,45 @@
 <x-app-layout>
     <div class="py-10">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-7">
-            <div class="grid grid-cols-1 gap-6 xl:grid-cols-[minmax(0,0.95fr)_minmax(0,1.35fr)]">
-                {{-- Filtro de período com intervalo personalizado --}}
-                <div class="rounded-xl border border-gray-200/90 bg-white p-6 shadow-[0_12px_28px_rgba(15,23,42,0.08)]">
-                    <form method="GET" action="{{ route('transactions.index') }}" id="period-filter-form" class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
-                        <div class="md:col-span-1">
+            <div class="rounded-xl border border-gray-200/90 bg-white p-6 shadow-[0_12px_28px_rgba(15,23,42,0.08)]">
+                <form method="GET" action="{{ route('transactions.index') }}" id="period-filter-form" class="space-y-4">
+                    <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+                        <div class="space-y-1">
                             <p class="text-xs uppercase tracking-wide text-gray-500">Filtro de Período</p>
-                            <h3 class="mt-1 text-sm font-semibold text-gray-800">Filtre a lista por intervalo</h3>
+                            <h3 class="text-sm font-semibold text-gray-800">Filtre a lista por intervalo</h3>
                         </div>
 
-                        <div>
-                            <label for="period" class="block text-xs uppercase tracking-wide text-gray-500">Período</label>
-                            <select id="period" name="period" class="mt-2 h-10 w-full rounded-xl border border-gray-300 bg-white text-sm text-gray-900 shadow-sm focus:border-green-500 focus:ring-2 focus:ring-green-100" onchange="window.toggleCustomPeriodFields(this.value)">
-                                @foreach ($periodOptions as $periodValue => $periodLabel)
-                                    <option value="{{ $periodValue }}" @selected(request('period') !== 'custom' && $selectedPeriod === $periodValue)>{{ $periodLabel }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-
-                        <div class="{{ request('period') === 'custom' ? '' : 'hidden' }}">
-                            <label for="start_date" class="block text-xs uppercase tracking-wide text-gray-500">Data Inicial</label>
-                            <input id="start_date" name="start_date" type="date" value="{{ request('start_date') }}" class="mt-2 h-10 w-full rounded-xl border border-gray-300 bg-white text-sm text-gray-900 shadow-sm focus:border-green-500 focus:ring-2 focus:ring-green-100">
-                        </div>
-
-                        <div class="flex items-end justify-end">
-                            <div class="mr-3 w-full {{ request('period') === 'custom' ? '' : 'hidden' }}">
-                                <label for="end_date" class="sr-only">Data Final</label>
-                                <input id="end_date" name="end_date" type="date" value="{{ request('end_date') }}" class="mt-2 h-10 w-full rounded-xl border border-gray-300 bg-white text-sm text-gray-900 shadow-sm focus:border-green-500 focus:ring-2 focus:ring-green-100">
+                        <div class="flex w-full flex-col gap-3 sm:flex-row sm:items-end lg:w-auto lg:justify-end">
+                            <div class="w-full sm:w-[240px]">
+                                <label for="period" class="block text-xs uppercase tracking-wide text-gray-500">Período</label>
+                                <select id="period" name="period" class="mt-2 h-10 w-full rounded-xl border border-gray-300 bg-white text-sm text-gray-900 shadow-sm focus:border-green-500 focus:ring-2 focus:ring-green-100" onchange="window.toggleCustomPeriodFields(this.value)">
+                                    @foreach ($periodOptions as $periodValue => $periodLabel)
+                                        <option value="{{ $periodValue }}" @selected(request('period') !== 'custom' && $selectedPeriod === $periodValue)>{{ $periodLabel }}</option>
+                                    @endforeach
+                                </select>
                             </div>
 
-                            <div class="w-full md:w-auto">
-                                <button type="submit" class="h-10 w-full md:w-auto rounded-xl border border-green-700 bg-green-600 px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-200">
+                            <div class="w-full sm:w-[240px]">
+                                <button type="submit" class="h-10 w-full rounded-xl border border-green-700 bg-green-600 px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-200">
                                     Aplicar
                                 </button>
                             </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+
+                    <div id="custom-period-fields" class="{{ request('period') === 'custom' ? 'grid' : 'hidden' }} grid-cols-1 gap-4 sm:grid-cols-2">
+                        <div>
+                            <label for="start_date" class="block text-xs uppercase tracking-wide text-gray-500">Data Inicial</label>
+                            <input id="start_date" name="start_date" type="date" value="{{ request('start_date') }}" class="mt-2 h-10 w-full rounded-xl border border-gray-300 bg-white text-sm text-gray-900 shadow-sm focus:border-green-500 focus:ring-2 focus:ring-green-100">
+                        </div>
+
+                        <div>
+                            <label for="end_date" class="block text-xs uppercase tracking-wide text-gray-500">Data Final</label>
+                            <input id="end_date" name="end_date" type="date" value="{{ request('end_date') }}" class="mt-2 h-10 w-full rounded-xl border border-gray-300 bg-white text-sm text-gray-900 shadow-sm focus:border-green-500 focus:ring-2 focus:ring-green-100">
+                        </div>
+                    </div>
+                </form>
+            </div>
 
             @if (session('status'))
                 <div class="rounded-lg border border-green-300 bg-green-50 px-4 py-3 text-sm font-medium text-green-800 shadow-sm">
