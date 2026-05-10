@@ -106,7 +106,7 @@ tests/
 ### Instalação
 
 ```bash
-git clone <url-do-repositorio>
+git clone [<url-do-repositorio>](https://github.com/NatanLuz/meu-saldo-certo.git)
 cd SaldoPro
 
 composer install
