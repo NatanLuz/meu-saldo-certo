@@ -140,31 +140,31 @@ php artisan test
 
 ## Screenshots
 
-A pasta `Screenshots` foi incluída no projeto para documentar visualmente as principais telas e reforçar a apresentação do sistema.
+A pasta `screenshots` foi incluída no projeto para documentar visualmente as principais telas e reforçar a apresentação do sistema. Os arquivos foram padronizados para nomes sem acentos e em minúsculas visando compatibilidade entre sistemas de arquivos.
 
 ### Login
 
 Tela de autenticação de usuário.
 
-![Login](Screenshots/Login.PNG)
+![Login](./screenshots/login.png)
 
 ### Dashboard
 
 Resumo financeiro com gráfico e filtro por período.
 
-![Dashboard](Screenshots/Dashboard.PNG)
+![Dashboard](./screenshots/dashboard.png)
 
 ### Transações
 
 Lista de movimentações com ações de cadastro, edição e exclusão.
 
-![Transações](Screenshots/TeladeTransações.PNG)
+![Transações](./screenshots/tela-transacoes.png)
 
 ### Nova Transação
 
 Formulário para registrar uma nova movimentação financeira.
 
-![Nova Transação](Screenshots/NovaTransação.PNG)
+![Nova Transação](./screenshots/nova-transacao.png)
 
 ## Banco de Dados
 
