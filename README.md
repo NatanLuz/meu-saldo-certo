@@ -9,8 +9,6 @@ Em breve.
 ![Laravel](https://img.shields.io/badge/Laravel-12%2B-red)
 ![PHP](https://img.shields.io/badge/PHP-8.2%2B-blue)
 ![Tailwind](https://img.shields.io/badge/Tailwind%20CSS-3%2B-38BDF8)
-![Status](https://img.shields.io/badge/status-MVP%20Avançado-green)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
 ## Visão Geral
 
