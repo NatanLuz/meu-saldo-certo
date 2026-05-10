@@ -63,11 +63,11 @@ Essa estrutura facilita manutenção, evolução e leitura do código em cenári
 - Laravel 12
 - PHP 8.2+
 - Blade
-- Tailwind CSS
+- TailwindCSS
 - Alpine.js
 - Chart.js
 - Vite
-- SQLite em ambiente local
+- SQLite
 - Laravel Breeze
 
 ## Estrutura do Projeto
