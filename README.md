@@ -106,10 +106,12 @@ tests/
 ### Instalação
 
 ```bash
-git clone [<url-do-repositorio>](https://github.com/NatanLuz/meu-saldo-certo.git)
+git clone https://github.com/NatanLuz/meu-saldo-certo.git)
+
 cd SaldoPro
 
 composer install
+
 npm install
 
 cp .env.example .env
