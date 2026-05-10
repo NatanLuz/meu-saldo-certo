@@ -180,14 +180,6 @@ Relacionamentos:
 - User 1:N Categories
 - Category 1:N Transactions
 
-## Melhorias Futuras
-
-- Exportação de relatório em PDF.
-- Sistema de insights financeiros.
-- Filtros mais avançados por categoria e faixa de valor.
-- Deploy em ambiente de produção.
-- Painel com métricas adicionais e comparativos mensais.
-
 ## Autor
 
 Natan Da Luz
