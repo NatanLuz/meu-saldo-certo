@@ -146,25 +146,25 @@ A pasta `Screenshots` foi incluída no projeto para documentar visualmente as pr
 
 Tela de autenticação de usuário.
 
-![Login](../Screenshots/Login.PNG)
+![Login](Screenshots/Login.PNG)
 
 ### Dashboard
 
 Resumo financeiro com gráfico e filtro por período.
 
-![Dashboard](../Screenshots/Dashboard.PNG)
+![Dashboard](Screenshots/Dashboard.PNG)
 
 ### Transações
 
 Lista de movimentações com ações de cadastro, edição e exclusão.
 
-![Transações](../Screenshots/TeladeTransações.PNG)
+![Transações](Screenshots/TeladeTransações.PNG)
 
 ### Nova Transação
 
 Formulário para registrar uma nova movimentação financeira.
 
-![Nova Transação](../Screenshots/NovaTransação.PNG)
+![Nova Transação](Screenshots/NovaTransação.PNG)
 
 ## Banco de Dados
 
@@ -193,10 +193,6 @@ Relacionamentos:
 Natan Da Luz
 
 - E-mail: <natandaluz01@gmail.com>
-<<<<<<< HEAD
-=======
-
->>>>>>> 6c929b617f3a66ac3e5893f40887f1a61827511e
 - LinkedIn: <https://www.linkedin.com/in/natandaluzdesenvolvedor/>
 
 ## Licença
