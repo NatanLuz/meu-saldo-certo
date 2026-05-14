@@ -33,6 +33,13 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 # Copia arquivos do Composer e instala dependências sem os pacotes de desenvolvimento
 COPY composer.json composer.lock* ./
+# Copia código necessário para que o Composer e autoload encontrem arquivos (antes de instalar)
+COPY app app
+COPY bootstrap bootstrap
+COPY config config
+COPY database database
+COPY routes routes
+COPY artisan artisan
 RUN composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader --no-progress || composer install --no-dev --no-interaction
 
 ### imagem final: runtime
