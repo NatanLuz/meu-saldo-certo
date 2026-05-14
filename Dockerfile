@@ -36,7 +36,7 @@ COPY composer.json composer.lock* ./
 RUN composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader --no-progress || composer install --no-dev --no-interaction
 
 ### imagem final: runtime
-FROM php:8.2-cli-slim
+FROM php:8.2-cli
 WORKDIR /app
 
 # Dependências em tempo de execução necessárias para extensões
