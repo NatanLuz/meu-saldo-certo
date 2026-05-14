@@ -1,0 +1,15 @@
+node_modules
+vendor
+.env
+.env.*
+.git
+.github
+.vscode
+storage/*.key
+storage/*.sqlite
+npm-debug.log
+yarn-error.log
+public/hot
+public/storage
+/.idea
+/.venv
