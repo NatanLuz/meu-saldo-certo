@@ -52,11 +52,9 @@ RUN apt-get update \
         ca-certificates \
         git \
         unzip \
-        libpq5 \
+        libpq-dev \
+    && docker-php-ext-install pdo pdo_pgsql \
     && rm -rf /var/lib/apt/lists/*
-
-# Habilita a extensão pdo_pgsql (PostgreSQL)
-RUN docker-php-ext-install pdo pdo_pgsql || true
 
 # Copia os arquivos da aplicação
 COPY . .
