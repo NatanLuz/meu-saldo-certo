@@ -14,7 +14,7 @@ O sistema permite registrar, consultar e analisar movimentações financeiras po
 
 Este projeto foi desenvolvido com foco em simular um sistema financeiro Real para o dia a dia, aplicando boas práticas de desenvolvimento com Laravel, organização de código e atenção à experiência do usuário. O objetivo principal é demonstrar capacidade de construir uma aplicação completa, desde a modelagem de dados até a interface final.
 
-## O que o projeto oferece de Diferencial 
+## Diferencial do Projeto
 
 - Dashboard com agregação dinâmica de dados financeiros.
 - Filtro por período com atualização clara da interface.
