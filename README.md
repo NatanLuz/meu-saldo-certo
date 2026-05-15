@@ -12,7 +12,7 @@ O sistema permite registrar, consultar e analisar movimentações financeiras po
 
 ## Objetivo do Projeto
 
-Este projeto foi desenvolvido com foco em simular um sistema financeiro Real para o dia a dia, aplicando boas práticas de desenvolvimento com Laravel, organização de código e atenção à experiência do usuário. O objetivo principal é demonstrar capacidade de construir uma aplicação completa, desde a modelagem de dados até a interface final.
+Este projeto foi desenvolvido com foco em criar um sistema financeiro Real para o dia a dia, aplicando boas práticas de desenvolvimento com Laravel, organização de código e atenção à experiência do usuário. O objetivo principal é demonstrar capacidade de construir uma aplicação completa, desde a modelagem de dados até a interface final com deploy
 
 ## Diferencial do Projeto
 
