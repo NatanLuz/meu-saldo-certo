@@ -47,10 +47,10 @@ Este projeto foi desenvolvido com foco em criar um sistema financeiro Real para 
 O projeto segue o padrão MVC do Laravel com separação clara de responsabilidades:
 
 - Controllers: orquestram o fluxo entre validação, modelos e views.
-- Form Requests: centralizam regras de validação e mantêm os controllers enxutos.
-- Policies: controlam autorização por usuário.
-- Models: concentram relacionamentos e parte das regras de domínio.
-- Views com Blade: entregam a camada de apresentação com Tailwind CSS.
+- Form Requests: Centralizam regras de validação e mantêm os controllers enxutos.
+- Policies: Controlam autorização por usuário.
+- Models: Concentram relacionamentos e parte das regras de domínio.
+- Views com Blade: Entregam a camada de apresentação com Tailwind CSS.
 
 Essa estrutura facilita manutenção, evolução e leitura do código em cenários reais de produto.
 
