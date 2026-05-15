@@ -6,7 +6,7 @@ Meu Saldo Certo, é uma aplicação financeira desenvolvida em Laravel para cont
 ![PHP](https://img.shields.io/badge/PHP-8.2%2B-blue)
 ![Tailwind](https://img.shields.io/badge/Tailwind%20CSS-3%2B-38BDF8)
 
-## Visão Geral
+## Visão Geral do Projeto
 
 O sistema permite registrar, consultar e analisar movimentações financeiras por usuário autenticado. A interface foi desenhada para priorizar leitura rápida de dados, previsibilidade de uso e uma apresentação consistente para recrutadores e portfólio.
 
@@ -54,7 +54,7 @@ O projeto segue o padrão MVC do Laravel com separação clara de responsabilida
 
 Essa estrutura facilita manutenção, evolução e leitura do código em cenários reais de produto.
 
-## Stack Utilizada
+## Stack Utilizada no projeto
 
 - Laravel 12
 - PHP 8.2+
