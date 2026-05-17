@@ -1,4 +1,4 @@
-*.log
+git push origin main*.log
 .DS_Store
 Thumbs.db
 
