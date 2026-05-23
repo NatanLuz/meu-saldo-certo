@@ -134,13 +134,15 @@ Depois acesse:
 php artisan test
 ```
 
-## Screenshots
+## Pasta Screenshots
 
 A pasta `screenshots` foi incluída no projeto para documentar visualmente as principais telas e reforçar a apresentação do sistema. Os arquivos foram padronizados para nomes sem acentos e em minúsculas visando compatibilidade entre sistemas de arquivos.
 
+## Screenshots do Projeto
+
 ### Login
 
-Tela de autenticação de usuário.
+Tela de autenticação de usuário para entrar na aplicação
 
 ![Login](./screenshots/login.png)
 
