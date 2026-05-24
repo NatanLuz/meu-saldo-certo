@@ -8,7 +8,7 @@ Meu Saldo Certo, é uma aplicação financeira desenvolvida em Laravel para cont
 
 ## Visão Geral do Projeto
 
-O sistema permite registrar, consultar e analisar movimentações financeiras por usuário autenticado. A interface foi desenhada para priorizar leitura rápida de dados, previsibilidade de uso e uma apresentação consistente para recrutadores e portfólio.
+O sistema vai permitir que você registre, consulte e analise movimentações financeiras por usuário autenticado. A interface foi desenhada para priorizar leitura rápida de dados, previsibilidade de uso e uma apresentação consistente para recrutadores e portfólio.
 
 ## Objetivo do Projeto
 
@@ -134,13 +134,15 @@ Depois acesse:
 php artisan test
 ```
 
-## Screenshots
+## Pasta Screenshots
 
 A pasta `screenshots` foi incluída no projeto para documentar visualmente as principais telas e reforçar a apresentação do sistema. Os arquivos foram padronizados para nomes sem acentos e em minúsculas visando compatibilidade entre sistemas de arquivos.
 
+## Screenshots do Projeto
+
 ### Login
 
-Tela de autenticação de usuário.
+Tela de autenticação de usuário para entrar na aplicação
 
 ![Login](./screenshots/login.png)
 
@@ -185,4 +187,4 @@ Natan Da Luz
 
 ## Licença
 
-Projeto licenciado sob a licença MIT.
+Projeto é licenciado sob a licença MIT.
