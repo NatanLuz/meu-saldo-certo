@@ -187,4 +187,4 @@ Natan Da Luz
 
 ## Licença
 
-Projeto licenciado sob a licença MIT.
+Projeto é licenciado sob a licença MIT.
