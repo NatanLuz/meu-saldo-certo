@@ -1,4 +1,6 @@
-## Meu Saldo Certo Projeto Financeiro
+## Meu Saldo Certo 
+
+Projeto Financeiro de controle financeiro.
 
 Meu Saldo Certo, é uma aplicação financeira desenvolvida em Laravel para controle de receitas, despesas e saldo. O projeto foi construído com foco em clareza visual, organização de código e apresentação profissional, simulando a experiência de um produto real para portfólio.
 
