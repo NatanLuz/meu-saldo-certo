@@ -263,7 +263,6 @@ Natan Da Luz
 
 - E-mail: [natandaluz01@gmail.com](mailto:natandaluz01@gmail.com)
 - LinkedIn: [natandaluzdesenvolvedor](https://www.linkedin.com/in/natandaluzdesenvolvedor/)
-- GitHub: [NatanLuz/meu-saldo-certo](https://github.com/NatanLuz/meu-saldo-certo)
 
 ## Licença
 
