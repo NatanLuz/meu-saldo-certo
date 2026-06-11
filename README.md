@@ -246,17 +246,6 @@ Relacionamentos:
 - Construção de um fluxo simples de multi-tenant por usuário.
 - Preparação de projeto com deploy e documentação mais próxima de um produto real.
 
-## Possíveis Melhorias Futuras 🔮
-
-- Exportação de relatórios em PDF e CSV.
-- Filtros mais avançados por categoria, tipo e intervalo customizado.
-- Metas financeiras e indicadores de evolução mensal.
-- Alertas de gastos acima do planejado.
-- Nova camada de perfil para personalização da experiência.
-- Evolução do gráfico com mais recortes analíticos.
-- Suporte a múltiplas moedas.
-- Testes automatizados adicionais cobrindo mais cenários de negócio.
-
 ## Autor 👨‍💻
 
 Natan Da Luz
