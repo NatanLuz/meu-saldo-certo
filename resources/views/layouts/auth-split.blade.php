@@ -17,14 +17,14 @@
     </head>
     <body class="bg-slate-100 font-sans text-slate-900 antialiased transition-colors duration-200">
         <div class="min-h-screen lg:flex">
-            <aside class="relative hidden items-center justify-center overflow-hidden bg-gradient-to-br from-green-600 via-green-500 to-green-400 px-10 py-16 text-white lg:flex lg:w-1/2">
+            <aside class="relative hidden items-center justify-center overflow-hidden bg-gradient-to-br from-green-600 via-green-500 to-green-400 px-8 py-10 text-white lg:flex lg:w-1/2 xl:px-10 xl:py-16">
                 <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent_40%),radial-gradient(circle_at_bottom_left,rgba(0,0,0,0.08),transparent_35%)]"></div>
-                <div class="relative z-10 mx-auto flex w-full max-w-md flex-col items-center gap-12 text-center">
-                    <div class="group inline-flex h-[420px] w-[420px] flex-col items-center justify-center rounded-full bg-white/95 p-10 shadow-2xl shadow-green-950/30 ring-1 ring-white/50 transition-all duration-300 hover:shadow-2xl hover:shadow-green-950/40">
+                <div class="relative z-10 mx-auto flex w-full max-w-md flex-col items-center gap-8 text-center xl:gap-12">
+                    <div class="group flex aspect-square w-full max-w-[320px] items-center justify-center rounded-full bg-white/95 p-8 shadow-2xl shadow-green-950/30 ring-1 ring-white/50 transition-all duration-300 hover:shadow-2xl hover:shadow-green-950/40 xl:max-w-[420px] xl:p-10">
                         <img src="{{ asset('img/logo.png') }}" alt="{{ config('app.name', 'Meu Saldo Certo') }}" class="h-26 w-26 object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-90" />
                     </div>
 
-                    <div class="space-y-8">
+                    <div class="space-y-5 xl:space-y-8">
                         <p class="text-xl font-medium leading-relaxed text-white">
                             Gerencie suas finanças com facilidade
                         </p>
@@ -44,8 +44,8 @@
                 </div>
             </aside>
 
-            <main class="flex w-full items-center justify-center bg-slate-50 px-4 py-10 transition-colors duration-200 sm:px-6 lg:w-1/2 lg:px-8">
-                <div class="w-full max-w-md px-4 sm:px-0 mx-auto" x-data="{ showPassword: false }">
+            <main class="flex w-full items-center justify-center bg-slate-50 px-4 py-6 transition-colors duration-200 sm:px-6 sm:py-10 lg:w-1/2 lg:px-8">
+                <div class="mx-auto w-full max-w-md" x-data="{ showPassword: false }">
                     <!-- theme toggle removed from auth UI to keep auth pages always light -->
 
                     <div class="mb-6 text-center lg:hidden">
@@ -55,7 +55,7 @@
                         <p class="mt-2 text-sm text-slate-500">Gerencie suas finanças com facilidade</p>
                     </div>
 
-                    <div class="rounded-3xl border border-slate-200/50 bg-white p-11 shadow-2xl shadow-slate-200/30 transition-colors duration-200">
+                    <div class="rounded-3xl border border-slate-200/50 bg-white p-6 shadow-2xl shadow-slate-200/30 transition-colors duration-200 sm:p-8 xl:p-11">
                         {{-- header section (title/subtitle) --}}
                         @hasSection('auth.header')
                             @yield('auth.header')

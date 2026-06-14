@@ -1,7 +1,7 @@
 <x-app-layout>
-    <div class="py-10">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-7">
-            <div class="rounded-xl border border-gray-200/90 bg-white p-6 shadow-[0_12px_28px_rgba(15,23,42,0.08)]">
+    <div class="py-6 sm:py-10">
+        <div class="mx-auto max-w-7xl space-y-7 px-4 sm:px-6 lg:px-8">
+            <div class="rounded-xl border border-gray-200/90 bg-white p-4 shadow-[0_12px_28px_rgba(15,23,42,0.08)] sm:p-6">
                 <form method="GET" action="{{ route('transactions.index') }}" id="period-filter-form" class="space-y-4">
                     <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
                         <div class="space-y-1">
@@ -10,7 +10,7 @@
                         </div>
 
                         <div class="flex w-full flex-col gap-3 sm:flex-row sm:items-end lg:w-auto lg:justify-end">
-                            <div class="w-full sm:w-[240px]">
+                            <div class="w-full sm:w-60">
                                 <label for="period" class="block text-xs uppercase tracking-wide text-gray-500">Período</label>
                                 <select id="period" name="period" class="mt-2 h-10 w-full rounded-xl border border-gray-300 bg-white text-sm text-gray-900 shadow-sm focus:border-green-500 focus:ring-2 focus:ring-green-100" onchange="window.toggleCustomPeriodFields(this.value)">
                                     @foreach ($periodOptions as $periodValue => $periodLabel)
@@ -19,8 +19,8 @@
                                 </select>
                             </div>
 
-                            <div class="w-full sm:w-[240px]">
-                                <button type="submit" class="h-10 w-full rounded-xl border border-green-700 bg-green-600 px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-200">
+                            <div class="w-full sm:w-auto">
+                                <button type="submit" class="h-10 w-full rounded-xl border border-green-700 bg-green-600 px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-200 sm:w-auto">
                                     Aplicar
                                 </button>
                             </div>
@@ -57,13 +57,13 @@
                 </div>
             @endif
 
-                <div class="overflow-hidden rounded-xl border border-gray-200/90 bg-white p-6 shadow-[0_12px_28px_rgba(15,23,42,0.08)]">
+            <div class="overflow-hidden rounded-xl border border-gray-200/90 bg-white p-4 shadow-[0_12px_28px_rgba(15,23,42,0.08)] sm:p-6">
                 <h3 class="mb-5 text-lg font-semibold text-gray-800">Nova Transação</h3>
 
-                <form method="POST" action="{{ route('transactions.store') }}" class="flex flex-wrap gap-4 md:flex-nowrap md:items-end lg:gap-6">
+                <form method="POST" action="{{ route('transactions.store') }}" class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-5 xl:items-end xl:gap-6">
                     @csrf
 
-                    <div class="w-full md:w-auto md:flex-1">
+                    <div class="w-full">
                         <label for="type" class="block text-sm font-medium text-gray-700">Tipo</label>
                         <select id="type" name="type" @class([
                             'mt-2 h-10 block w-full rounded-xl border bg-white px-3 text-sm text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-green-100',
@@ -78,7 +78,7 @@
                         @enderror
                     </div>
 
-                    <div class="w-full md:w-auto md:flex-1">
+                    <div class="w-full">
                         <label for="amount" class="block text-sm font-medium text-gray-700">Valor</label>
                         <input id="amount" name="amount" type="number" step="0.01" min="0.01" value="{{ old('amount') }}" @class([
                             'mt-2 h-10 block w-full rounded-xl border bg-white px-3 text-sm text-gray-900 shadow-sm focus:outline-none focus:ring-2 placeholder:text-gray-400',
@@ -90,7 +90,7 @@
                         @enderror
                     </div>
 
-                    <div class="w-full md:w-auto md:flex-1">
+                    <div class="w-full">
                         <label for="date" class="block text-sm font-medium text-gray-700">Data</label>
                         <input id="date" name="date" type="date" value="{{ old('date', today()->toDateString()) }}" @class([
                             'mt-2 h-10 block w-full rounded-xl border bg-white px-3 text-sm shadow-sm focus:outline-none focus:ring-2 text-gray-900',
@@ -102,7 +102,7 @@
                         @enderror
                     </div>
 
-                    <div class="w-full md:w-auto md:flex-1">
+                    <div class="w-full">
                         <label for="category_name" class="block text-sm font-medium text-gray-700">Categoria</label>
                         <input id="category_name" name="category_name" type="text" maxlength="80" value="{{ old('category_name') }}" placeholder="Ex: Academia, Lazer, Streaming" @class([
                             'mt-2 h-10 block w-full rounded-xl border bg-white px-3 text-sm text-gray-900 shadow-sm focus:outline-none focus:ring-2 placeholder:text-gray-400',
@@ -114,8 +114,8 @@
                         @enderror
                     </div>
 
-                    <div class="w-full md:w-auto md:shrink-0">
-                        <button type="submit" class="inline-flex h-10 w-full items-center justify-center rounded-xl border border-green-700 bg-green-600 px-4 text-sm font-semibold uppercase tracking-wide text-white shadow-sm transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-200 focus:ring-offset-2">
+                    <div class="w-full sm:col-span-2 xl:col-span-1">
+                        <button type="submit" class="inline-flex h-10 w-full items-center justify-center rounded-xl border border-green-700 bg-green-600 px-4 text-sm font-semibold uppercase tracking-wide text-white shadow-sm transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-200 focus:ring-offset-2 xl:w-auto">
                             Nova Transação
                         </button>
                     </div>
@@ -123,35 +123,35 @@
             </div>
 
 
-            <div class="overflow-hidden rounded-xl border border-gray-200/90 bg-white p-6 shadow-[0_12px_28px_rgba(15,23,42,0.08)]">
+            <div class="overflow-hidden rounded-xl border border-gray-200/90 bg-white p-4 shadow-[0_12px_28px_rgba(15,23,42,0.08)] sm:p-6">
                 <h3 class="mb-4 text-lg font-semibold text-gray-800">Suas Transações</h3>
 
                 <div class="overflow-x-auto rounded-lg border border-gray-200">
-                    <table class="min-w-full divide-y divide-gray-200 text-sm">
+                    <table class="min-w-[640px] divide-y divide-gray-200 text-sm sm:min-w-full">
                         <thead class="bg-gray-50">
                             <tr>
-                                <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-600">Data</th>
-                                <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-600">Tipo</th>
-                                <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-600">Categoria</th>
-                                <th class="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-gray-600">Valor</th>
-                                <th class="px-4 py-3"></th>
+                                <th class="px-3 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-600 sm:px-4">Data</th>
+                                <th class="px-3 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-600 sm:px-4">Tipo</th>
+                                <th class="px-3 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-600 sm:px-4">Categoria</th>
+                                <th class="px-3 py-3 text-right text-xs font-semibold uppercase tracking-wider text-gray-600 sm:px-4">Valor</th>
+                                <th class="px-3 py-3 sm:px-4"></th>
                             </tr>
                         </thead>
                         <tbody id="transactions-table-body" class="divide-y divide-gray-200 bg-white">
                             @forelse ($transactions as $transaction)
                                 <tr data-transaction-date="{{ optional($transaction->date)->format('Y-m-d') ?? $transaction->created_at->format('Y-m-d') }}" class="transition-colors odd:bg-white even:bg-gray-50 hover:bg-gray-100">
-                                    <td class="whitespace-nowrap px-4 py-3 text-sm text-gray-700">{{ optional($transaction->date)->format('d/m/Y') ?? $transaction->created_at->format('d/m/Y') }}</td>
-                                    <td class="px-4 py-3 text-sm">
+                                    <td class="whitespace-nowrap px-3 py-3 text-sm text-gray-700 sm:px-4">{{ optional($transaction->date)->format('d/m/Y') ?? $transaction->created_at->format('d/m/Y') }}</td>
+                                    <td class="px-3 py-3 text-sm sm:px-4">
                                         <span class="inline-flex rounded-full px-2.5 py-1 text-xs font-semibold {{ $transaction->type === 'income' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700' }}">
                                             {{ $transaction->type === 'income' ? 'Receita' : 'Despesa' }}
                                         </span>
                                     </td>
-                                    <td class="px-4 py-3 text-sm text-gray-800">{{ $transaction->category->name }}</td>
-                                    <td class="whitespace-nowrap px-4 py-3 text-right text-sm font-semibold {{ $transaction->type === 'income' ? 'text-green-700' : 'text-red-700' }}">
+                                    <td class="max-w-40 break-words px-3 py-3 text-sm text-gray-800 sm:max-w-56 sm:px-4">{{ $transaction->category->name }}</td>
+                                    <td class="whitespace-nowrap px-3 py-3 text-right text-sm font-semibold sm:px-4 {{ $transaction->type === 'income' ? 'text-green-700' : 'text-red-700' }}">
                                         {{ formatCurrency($transaction->amount) }}
                                     </td>
-                                    <td class="px-4 py-3 text-right">
-                                        <div class="inline-flex items-center gap-2">
+                                    <td class="px-3 py-3 text-right sm:px-4">
+                                        <div class="inline-flex flex-col items-stretch gap-2 sm:flex-row sm:items-center">
                                             <a href="{{ route('transactions.edit', $transaction) }}" class="inline-flex items-center rounded-md border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-gray-700 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-200">
                                                 Editar
                                             </a>
