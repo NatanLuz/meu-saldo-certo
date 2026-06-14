@@ -1,10 +1,10 @@
 <section class="space-y-6">
     <header>
-        <h2 class="text-lg font-medium text-gray-800">
+        <h2 class="text-lg font-medium text-gray-800 dark:text-slate-100">
             Excluir conta
         </h2>
 
-        <p class="mt-1 text-sm text-gray-500">
+        <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">
             Ao excluir sua conta, todos os dados serão removidos permanentemente. Antes de continuar, salve qualquer informação que deseja manter.
         </p>
     </header>
@@ -15,15 +15,15 @@
     >Excluir conta</x-danger-button>
 
     <x-modal name="confirm-user-deletion" :show="$errors->userDeletion->isNotEmpty()" focusable>
-        <form method="post" action="{{ route('profile.destroy') }}" class="p-6">
+        <form method="post" action="{{ route('profile.destroy') }}" class="p-6 dark:bg-slate-900">
             @csrf
             @method('delete')
 
-            <h2 class="text-lg font-medium text-gray-800">
+            <h2 class="text-lg font-medium text-gray-800 dark:text-slate-100">
                 Tem certeza de que deseja excluir sua conta?
             </h2>
 
-            <p class="mt-1 text-sm text-gray-500">
+            <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">
                 Essa ação é definitiva e removerá seus dados. Digite sua senha para confirmar a exclusão permanente da conta.
             </p>
 
