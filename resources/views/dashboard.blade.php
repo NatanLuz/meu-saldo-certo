@@ -3,16 +3,16 @@
         <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 space-y-8">
 
             <!-- Filtro de período -->
-            <div class="rounded-xl border border-gray-200/90 bg-white p-4 shadow-[0_12px_28px_rgba(15,23,42,0.08)] sm:p-6">
+            <div class="rounded-xl border border-gray-200/90 bg-white p-4 shadow-[0_12px_28px_rgba(15,23,42,0.08)] dark:border-slate-800 dark:bg-slate-900 sm:p-6">
                 <div class="flex flex-col gap-4">
                     <div>
-                        <p class="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">Filtro de Período</p>
-                        <h3 class="mt-2 text-sm font-semibold text-gray-800">Filtre o painel por intervalo para ver suas despesas e receitas.</h3>
+                        <p class="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-slate-400">Filtro de Período</p>
+                        <h3 class="mt-2 text-sm font-semibold text-gray-800 dark:text-slate-100">Filtre o painel por intervalo para ver suas despesas e receitas.</h3>
                     </div>
 
                     <div>
-                        <label for="period" class="block text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">Período</label>
-                        <select id="period" name="period" form="dashboard-period-form" class="mt-2 h-10 w-full rounded-xl border border-gray-300 bg-white text-sm text-gray-900 shadow-sm focus:border-green-500 focus:ring-2 focus:ring-green-100" onchange="window.toggleDashboardCustomPeriod(this.value)">
+                        <label for="period" class="block text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-slate-400">Período</label>
+                        <select id="period" name="period" form="dashboard-period-form" class="mt-2 h-10 w-full rounded-xl border border-gray-300 bg-white text-sm text-gray-900 shadow-sm focus:border-green-500 focus:ring-2 focus:ring-green-100 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:focus:border-green-500 dark:focus:ring-green-900/50" onchange="window.toggleDashboardCustomPeriod(this.value)">
                             @foreach ($periodOptions as $periodValue => $periodLabel)
                                 <option value="{{ $periodValue }}" @selected($selectedPeriod === $periodValue)>{{ $periodLabel }}</option>
                             @endforeach
@@ -23,13 +23,13 @@
                 <!-- Campos customizados (aparecem apenas com custom) -->
                 <form method="GET" action="{{ route('dashboard') }}" id="dashboard-period-form" class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_auto] lg:items-end {{ $selectedPeriod === 'custom' ? 'grid' : 'hidden' }}">
                     <div>
-                        <label for="start_date" class="block text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">Data Inicial</label>
-                        <input id="start_date" name="start_date" type="date" value="{{ $customStartDate }}" class="mt-2 h-10 w-full rounded-xl border border-gray-300 bg-white text-sm text-gray-900 shadow-sm focus:border-green-500 focus:ring-2 focus:ring-green-100">
+                        <label for="start_date" class="block text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-slate-400">Data Inicial</label>
+                        <input id="start_date" name="start_date" type="date" value="{{ $customStartDate }}" class="mt-2 h-10 w-full rounded-xl border border-gray-300 bg-white text-sm text-gray-900 shadow-sm focus:border-green-500 focus:ring-2 focus:ring-green-100 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:focus:border-green-500 dark:focus:ring-green-900/50">
                     </div>
 
                     <div>
-                        <label for="end_date" class="block text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">Data Final</label>
-                        <input id="end_date" name="end_date" type="date" value="{{ $customEndDate }}" class="mt-2 h-10 w-full rounded-xl border border-gray-300 bg-white text-sm text-gray-900 shadow-sm focus:border-green-500 focus:ring-2 focus:ring-green-100">
+                        <label for="end_date" class="block text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-slate-400">Data Final</label>
+                        <input id="end_date" name="end_date" type="date" value="{{ $customEndDate }}" class="mt-2 h-10 w-full rounded-xl border border-gray-300 bg-white text-sm text-gray-900 shadow-sm focus:border-green-500 focus:ring-2 focus:ring-green-100 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:focus:border-green-500 dark:focus:ring-green-900/50">
                     </div>
 
                     <button type="submit" class="h-10 w-full rounded-xl border border-green-700 bg-green-600 px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-200 sm:col-span-2 lg:col-span-1 lg:w-auto">
@@ -40,29 +40,29 @@
 
             <!-- Cards sobre o financeiro  -->
             <div class="grid w-full grid-cols-1 gap-4 md:grid-cols-3">
-                <div class="rounded-xl border border-slate-200 bg-white px-5 py-4 shadow-sm transition hover:shadow-md">
-                    <p class="text-xs uppercase tracking-wide text-slate-400">Saldo</p>
+                <div class="rounded-xl border border-slate-200 bg-white px-5 py-4 shadow-sm transition hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                    <p class="text-xs uppercase tracking-wide text-slate-400 dark:text-slate-400">Saldo</p>
                     <p class="mt-2 break-words text-2xl font-bold leading-tight tracking-tight sm:text-3xl {{ $balance >= 0 ? 'text-green-600' : 'text-red-600' }}">
                         {{ formatCurrency($balance) }}
                     </p>
                 </div>
 
-                <div class="rounded-xl border border-slate-200 bg-white px-5 py-4 shadow-sm transition hover:shadow-md">
+                <div class="rounded-xl border border-slate-200 bg-white px-5 py-4 shadow-sm transition hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
                     <p class="text-xs uppercase tracking-wide text-slate-400">Total De Receitas</p>
                     <p class="mt-2 break-words text-2xl font-semibold leading-tight tracking-tight text-blue-600 sm:text-3xl">{{ formatCurrency($incomeTotal) }}</p>
                 </div>
 
-                <div class="rounded-xl border border-slate-200 bg-white px-5 py-4 shadow-sm transition hover:shadow-md">
+                <div class="rounded-xl border border-slate-200 bg-white px-5 py-4 shadow-sm transition hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
                     <p class="text-xs uppercase tracking-wide text-slate-400">Total De Despesas</p>
                     <p class="mt-2 break-words text-2xl font-semibold leading-tight tracking-tight text-red-600 sm:text-3xl">{{ formatCurrency($expenseTotal) }}</p>
                 </div>
             </div>
 
-            <div class="mt-8 overflow-hidden rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition duration-200 hover:shadow-md sm:p-6">
+            <div class="mt-8 overflow-hidden rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition duration-200 hover:shadow-md dark:border-slate-800 dark:bg-slate-900 sm:p-6">
                 <div class="flex items-start justify-between gap-4">
                     <div>
-                        <h3 class="text-lg font-semibold text-slate-900">Receitas e Despesas</h3>
-                        <p class="mt-1 text-sm text-slate-500">Resumo financeiro do período.</p>
+                        <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100">Receitas e Despesas</h3>
+                        <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Resumo financeiro do período.</p>
                     </div>
                 </div>
                 <div class="mt-6 h-[240px] w-full sm:h-[280px] lg:h-[320px]">

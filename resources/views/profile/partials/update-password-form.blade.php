@@ -1,10 +1,10 @@
 <section>
     <header>
-        <h2 class="text-lg font-medium text-gray-800">
+        <h2 class="text-lg font-medium text-gray-800 dark:text-slate-100">
             Atualizar senha
         </h2>
 
-        <p class="mt-1 text-sm text-gray-500">
+        <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">
             Use uma senha forte e aleatoria para manter sua conta segura.
         </p>
     </header>
@@ -40,7 +40,7 @@
                     x-show="show"
                     x-transition
                     x-init="setTimeout(() => show = false, 2000)"
-                    class="text-sm text-gray-500"
+                    class="text-sm text-gray-500 dark:text-slate-400"
                 >Salvo.</p>
             @endif
         </div>

@@ -3,8 +3,9 @@
     x-data
     x-init="$store.theme.init()"
     @click="$store.theme.toggle()"
-    class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 shadow-sm transition hover:border-green-500 hover:text-green-700"
+    class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 shadow-sm transition hover:border-green-500 hover:text-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:border-green-400 dark:hover:text-green-300 dark:focus:ring-offset-slate-900"
     aria-label="Alternar tema claro e escuro"
+    :aria-pressed="$store.theme.isDark().toString()"
 >
     <svg x-show="!$store.theme.isDark()" x-cloak class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="12" cy="12" r="4" />
