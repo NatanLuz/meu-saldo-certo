@@ -45,3 +45,8 @@ Homestead.yaml
 /create_user.php
 
 
+
+# Arquivos locais/removidos do versionamento
+Desktop/
+setup_user.php
+reset_test_user.php
