@@ -32,34 +32,22 @@ class DashboardTest extends TestCase
             'type' => Transaction::TYPE_INCOME,
             'amount' => 1000,
             'category_id' => $incomeCategory->id,
+            'date' => now()->subDays(2)->toDateString(),
         ]);
 
         $recentExpense = $user->transactions()->create([
             'type' => Transaction::TYPE_EXPENSE,
             'amount' => 200,
             'category_id' => $expenseCategory->id,
+            'date' => now()->subDays(3)->toDateString(),
         ]);
 
         $oldIncome = $user->transactions()->create([
             'type' => Transaction::TYPE_INCOME,
             'amount' => 900,
             'category_id' => $incomeCategory->id,
+            'date' => now()->subDays(45)->toDateString(),
         ]);
-
-        $recentIncome->forceFill([
-            'created_at' => now()->subDays(2),
-            'updated_at' => now()->subDays(2),
-        ])->save();
-
-        $recentExpense->forceFill([
-            'created_at' => now()->subDays(3),
-            'updated_at' => now()->subDays(3),
-        ])->save();
-
-        $oldIncome->forceFill([
-            'created_at' => now()->subDays(45),
-            'updated_at' => now()->subDays(45),
-        ])->save();
 
         $response = $this->actingAs($user)->get(route('dashboard', ['period' => Transaction::PERIOD_7_DAYS]));
 
@@ -91,25 +79,15 @@ class DashboardTest extends TestCase
             'type' => Transaction::TYPE_INCOME,
             'amount' => 1500,
             'category_id' => $incomeCategory->id,
+            'date' => now()->setDate((int) now()->year, 1, 15)->toDateString(),
         ]);
 
         $expenseTransaction = $user->transactions()->create([
             'type' => Transaction::TYPE_EXPENSE,
             'amount' => 300,
             'category_id' => $expenseCategory->id,
+            'date' => now()->setDate((int) now()->year, 3, 15)->toDateString(),
         ]);
-
-        $year = (int) now()->year;
-
-        $incomeTransaction->forceFill([
-            'created_at' => now()->setDate($year, 1, 15),
-            'updated_at' => now()->setDate($year, 1, 15),
-        ])->save();
-
-        $expenseTransaction->forceFill([
-            'created_at' => now()->setDate($year, 3, 15),
-            'updated_at' => now()->setDate($year, 3, 15),
-        ])->save();
 
         $response = $this->actingAs($user)->get(route('dashboard', ['period' => Transaction::PERIOD_ALL]));
 

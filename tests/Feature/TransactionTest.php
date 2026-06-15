@@ -19,6 +19,7 @@ class TransactionTest extends TestCase
         $response = $this->actingAs($user)->post(route('transactions.store'), [
             'type' => Transaction::TYPE_INCOME,
             'amount' => 1200,
+            'date' => now()->toDateString(),
             'category_name' => 'Salary',
         ]);
 
@@ -57,7 +58,7 @@ class TransactionTest extends TestCase
             'type' => Transaction::TYPE_EXPENSE,
             'amount' => 50,
             'category_id' => $category->id,
-            
+            'date' => now()->toDateString(),
         ]);
 
         $this->actingAs($intruder)
@@ -77,6 +78,7 @@ class TransactionTest extends TestCase
         $response = $this->actingAs($user)->from(route('transactions.index'))->post(route('transactions.store'), [
             'type' => Transaction::TYPE_INCOME,
             'amount' => 0,
+            'date' => now()->toDateString(),
             'category_name' => 'Freelance',
         ]);
 
@@ -96,6 +98,7 @@ class TransactionTest extends TestCase
             ->post(route('transactions.store'), [
                 'type' => Transaction::TYPE_INCOME,
                 'amount' => 100,
+                'date' => now()->toDateString(),
                 'category_name' => '',
             ]);
 
@@ -113,6 +116,7 @@ class TransactionTest extends TestCase
         $response = $this->actingAs($user)->post(route('transactions.store'), [
             'type' => Transaction::TYPE_EXPENSE,
             'amount' => 89.90,
+            'date' => now()->toDateString(),
             'category_name' => 'Streaming',
         ]);
 
@@ -148,12 +152,14 @@ class TransactionTest extends TestCase
         $this->actingAs($user)->post(route('transactions.store'), [
             'type' => Transaction::TYPE_EXPENSE,
             'amount' => 100,
+            'date' => now()->toDateString(),
             'category_name' => 'Academia',
         ])->assertRedirect(route('transactions.index'));
 
         $this->actingAs($user)->post(route('transactions.store'), [
             'type' => Transaction::TYPE_EXPENSE,
             'amount' => 120,
+            'date' => now()->toDateString(),
             'category_name' => 'Academia',
         ])->assertRedirect(route('transactions.index'));
 
@@ -180,11 +186,13 @@ class TransactionTest extends TestCase
             'type' => Transaction::TYPE_INCOME,
             'amount' => 3000,
             'category_id' => $incomeCategory->id,
+            'date' => now()->subDay()->toDateString(),
         ]);
 
         $response = $this->actingAs($user)->patch(route('transactions.update', $transaction), [
             'type' => Transaction::TYPE_EXPENSE,
             'amount' => 120,
+            'date' => now()->toDateString(),
             'category_name' => 'Lazer',
         ]);
 
@@ -221,12 +229,14 @@ class TransactionTest extends TestCase
             'type' => Transaction::TYPE_EXPENSE,
             'amount' => 450,
             'category_id' => $ownerCategory->id,
+            'date' => now()->subDay()->toDateString(),
         ]);
 
         $this->actingAs($intruder)
             ->patch(route('transactions.update', $transaction), [
                 'type' => Transaction::TYPE_EXPENSE,
                 'amount' => 999,
+                'date' => now()->toDateString(),
                 'category_name' => 'Viagem',
             ])
             ->assertForbidden();
@@ -253,23 +263,15 @@ class TransactionTest extends TestCase
             'type' => Transaction::TYPE_EXPENSE,
             'amount' => 120,
             'category_id' => $category->id,
+            'date' => now()->subDays(2)->toDateString(),
         ]);
 
         $oldTransaction = $user->transactions()->create([
             'type' => Transaction::TYPE_EXPENSE,
             'amount' => 300,
             'category_id' => $category->id,
+            'date' => now()->subDays(40)->toDateString(),
         ]);
-
-        $recentTransaction->forceFill([
-            'created_at' => now()->subDays(2),
-            'updated_at' => now()->subDays(2),
-        ])->save();
-
-        $oldTransaction->forceFill([
-            'created_at' => now()->subDays(40),
-            'updated_at' => now()->subDays(40),
-        ])->save();
 
         $response = $this->actingAs($user)->get(route('transactions.index', ['period' => Transaction::PERIOD_7_DAYS]));
 
