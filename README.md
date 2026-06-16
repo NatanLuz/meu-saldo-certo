@@ -1,4 +1,4 @@
-# Meu Saldo Certo 💼
+## Meu Saldo Certo 💼
 
 É um Sistema financeiro desenvolvido em Laravel para controle de receitas, despesas, categorias e saldo por usuário autenticado. O projeto foi estruturado para funcionar como uma apresentação de portfólio moderna, com foco em clareza visual, organização de código, boas práticas e experiência de uso consistente.
 
