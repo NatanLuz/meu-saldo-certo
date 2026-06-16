@@ -32,9 +32,7 @@ O projeto nasceu de uma necessidade real. Durante um período de reorganização
 Os principais objetivos foram:
 
 - Resolver um problema real com software.
-- Praticar Laravel em uma aplicação completa.
 - Construir um sistema funcional e utilizável.
-- Desenvolver uma peça sólida de portfólio.
 
 ## Problema que resolve
 
