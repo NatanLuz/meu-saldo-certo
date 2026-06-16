@@ -1,258 +1,322 @@
-# Meu Saldo Certo 💼
-
-É um Sistema financeiro desenvolvido em Laravel para controle de receitas, despesas, categorias e saldo por usuário autenticado. O projeto foi estruturado para funcionar como uma apresentação de portfólio moderna, com foco em clareza visual, organização de código, boas práticas e experiência de uso consistente.
+# Meu Saldo Certo
 
 <p align="center">
-  <img alt="Laravel 12+" src="https://img.shields.io/badge/Laravel-12%2B-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" />
-  <img alt="PHP 8.2+" src="https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php&logoColor=white" />
-  <img alt="TailwindCSS" src="https://img.shields.io/badge/TailwindCSS-3%2B-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white" />
-  <img alt="SQLite" src="https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite&logoColor=white" />
-  <img alt="Railway" src="https://img.shields.io/badge/Deploy-Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white" />
+  Sistema Financeiro pessoal para gerenciamento de receitas, despesas, categorias e saldo por usuário autenticado.
 </p>
 
 <p align="center">
-  <a href="https://github.com/NatanLuz/meu-saldo-certo">
-    <img alt="Repositório" src="https://img.shields.io/badge/GitHub-Reposit%C3%B3rio-181717?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
+  <img alt="Laravel 12" src="https://img.shields.io/badge/Laravel-12-FF2D20?style=for-the-badge&logo=laravel&logoColor=white">
+  <img alt="PHP 8.2+" src="https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php&logoColor=white">
+  <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white">
+  <img alt="SQLite" src="https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite&logoColor=white">
+  <img alt="Railway" src="https://img.shields.io/badge/Deploy-Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white">
+</p>
+
+<p align="center">
   <a href="https://meu-saldo-certo-production.up.railway.app">
-    <img alt="Aplicação online" src="https://img.shields.io/badge/Acessar%20aplica%C3%A7%C3%A3o-Online-16A34A?style=for-the-badge&logo=railway&logoColor=white" />
+    <img alt="Aplicação online" src="https://img.shields.io/badge/Acessar_aplicação-Online-16A34A?style=for-the-badge&logo=railway&logoColor=white">
+  </a>
+  <a href="https://github.com/NatanLuz/meu-saldo-certo">
+    <img alt="Repositório no GitHub" src="https://img.shields.io/badge/GitHub-Repositório-181717?style=for-the-badge&logo=github&logoColor=white">
   </a>
 </p>
 
 ---
 
-## Sumário
+## Sobre o projeto
 
-- [Visão Geral](#visão-geral-)
-- [Objetivo do Projeto](#objetivo-do-projeto-)
-- [Diferenciais](#diferenciais-)
-- [Funcionalidades](#funcionalidades-principais-)
-- [Regras de Negócio](#regras-de-negócio-)
-- [Arquitetura](#arquitetura-e-organização-)
-- [Tecnologias e Conceitos Aplicados](#tecnologias-e-conceitos-aplicados-)
-- [Estrutura do Projeto](#estrutura-do-projeto-)
-- [Como Executar](#como-executar-localmente-)
-- [Deploy / Aplicação Online](#deploy--aplicação-online-)
-- [Screenshots](#screenshots-do-projeto-)
-- [Banco de Dados](#banco-de-dados-)
-- [Aprendizados](#aprendizados-no-projeto-)
-- [Possíveis Melhorias Futuras](#possíveis-melhorias-futuras-)
-- [Autor](#autor-)
-- [Licença](#licença)
+O **Meu Saldo Certo** é uma aplicação web desenvolvida em Laravel para organizar a vida financeira pessoal. O sistema permite registrar movimentações, acompanhar receitas e despesas, consultar o saldo consolidado e analisar os dados por meio de filtros e gráficos.
 
-## Visão Geral ✨
+O projeto nasceu de uma necessidade real. Durante um período de reorganização financeira familiar, tornou-se necessário acompanhar entradas, saídas e saldo de forma simples e prática. Em vez de utilizar uma solução pronta, optei por desenvolver uma aplicação própria e transformar esse desafio em uma oportunidade de aprofundar meus conhecimentos em Laravel.
 
-O Meu Saldo Certo permite registrar, consultar e analisar movimentações financeiras de forma simples e objetiva. A aplicação simula um produto real, com navegação intuitiva, separação clara de responsabilidades e interface organizada para leitura rápida dos dados.
+Os principais objetivos foram:
 
-A experiência foi pensada para cobrir o fluxo completo de um sistema financeiro moderno: autenticação, cadastro de categorias, controle de transações, filtros por período, dashboard analítico e isolamento de dados por usuário.
+- Resolver um problema real com software.
+- Praticar Laravel em uma aplicação completa.
+- Construir um sistema funcional e utilizável.
+- Desenvolver uma peça sólida de portfólio.
 
-## Objetivo do Projeto 🎯
+## Problema que resolve
 
-O objetivo deste projeto é demonstrar a construção de uma aplicação financeira completa com Laravel, desde a modelagem do domínio até a entrega final em produção. A proposta é evidenciar domínio de boas práticas, organização de arquitetura, responsividade, clareza de interface e preparo para deploy.
+O controle financeiro pode se tornar confuso quando receitas e despesas ficam distribuídas entre anotações, planilhas e diferentes aplicativos. O Meu Saldo Certo centraliza essas informações em uma interface única, permitindo:
 
-Além da parte funcional, o projeto foi desenhado como peça de portfólio para recrutadores, com foco em apresentação profissional, narrativa de produto e consistência visual.
+- Visualizar rapidamente a situação financeira.
+- Registrar e classificar movimentações.
+- Consultar o histórico por período.
+- Identificar receitas, despesas e saldo consolidado.
+- Manter os dados separados por usuário autenticado.
 
-## Diferenciais 🚀
+## Funcionalidades
 
-- Dashboard com consolidação dinâmica de dados financeiros.
-- Gráfico analítico para leitura rápida da evolução financeira.
-- Filtro por período para análise das movimentações.
-- CRUD completo de transações com fluxo organizado.
-- Categorias vinculadas a cada usuário autenticado.
-- Implementação de multi-tenant simples com isolamento por usuário.
-- Validação centralizada com Form Requests.
-- Regras de autorização com Policies.
-- Seeders para facilitar testes e demonstração local.
-- Interface responsiva, limpa e com foco em legibilidade.
+- Cadastro de usuários.
+- Login, logout e recuperação de senha.
+- Dashboard financeiro.
+- Registro de receitas e despesas.
+- Organização das movimentações por categorias.
+- Saldo consolidado.
+- Gráfico financeiro.
+- Filtros por período.
+- Cadastro, listagem, edição e exclusão de transações.
+- Perfil do usuário.
+- Interface responsiva.
+- Tema claro e Dark Mode com preferência persistida no navegador.
+- Isolamento de dados por usuário.
 
-## Funcionalidades Principais 🧩
+## Tecnologias utilizadas
 
-- Login, registro e recuperação de senha.
-- Dashboard financeiro com visão consolidada de receitas, despesas e saldo.
-- Gráfico analítico com apoio visual para tomada de decisão.
-- Cadastro, edição, listagem e exclusão de transações.
-- Classificação das movimentações entre receitas e despesas.
-- Associação de categorias por usuário autenticado.
-- Filtros por período para análise histórica.
-- Regras de autorização com Policies.
-- Estrutura preparada com seed inicial para uso local.
+| Camada | Tecnologias |
+| --- | --- |
+| Backend | PHP 8.2+, Laravel 12 |
+| Frontend | Blade, Tailwind CSS, Alpine.js |
+| Gráficos | Chart.js |
+| Autenticação | Laravel Breeze |
+| Banco local | SQLite |
+| Build de assets | Vite |
+| Testes | PHPUnit e testes de integração do Laravel |
+| Deploy | Railway |
 
-## Regras de Negócio 📌
+## Arquitetura e boas práticas
 
-- Toda transação deve estar vinculada a uma categoria.
-- Categorias pertencem exclusivamente ao usuário autenticado.
-- Uma transação deve ser classificada como receita ou despesa.
-- O tipo da categoria precisa ser compatível com o tipo da transação.
-- Cada usuário pode visualizar apenas os seus próprios dados.
+O projeto segue o padrão **MVC** e utiliza recursos do ecossistema Laravel para manter responsabilidades bem definidas.
 
-## Arquitetura e Organização 🏗️
+### Organização da aplicação
 
-O projeto segue o padrão MVC do Laravel com separação clara de responsabilidades:
+- **Controllers:** coordenam os fluxos entre requisições, domínio e views.
+- **Models:** representam as entidades e seus relacionamentos.
+- **Form Requests:** centralizam validação e normalização dos dados recebidos.
+- **Policies:** controlam a autorização sobre as transações.
+- **Blade Components:** reutilizam elementos de interface e mantêm consistência visual.
+- **Seeders:** disponibilizam categorias iniciais para usuários existentes.
 
-- Controllers: orquestram o fluxo entre validação, models e views.
-- Form Requests: centralizam regras de validação e mantêm os controllers enxutos.
-- Policies: controlam autorização por usuário.
-- Models: concentram relacionamentos e parte das regras de domínio.
-- Blade Components: melhoram reutilização e consistência visual.
-- TailwindCSS: oferece interface responsiva e organizada.
+### Conceitos aplicados
 
-Essa estrutura facilita manutenção, evolução e leitura do código em cenários reais de produto, além de tornar o projeto mais sólido para escalabilidade futura.
+- MVC.
+- Form Requests.
+- Policies.
+- Blade Components.
+- Relacionamentos Eloquent.
+- Mass assignment controlado.
+- Multi-tenant simples por usuário.
+- Isolamento de dados nas consultas e autorizações.
+- Filtros financeiros baseados na data da transação.
+- Responsividade e Dark Mode com Tailwind CSS.
 
-## Tecnologias e Conceitos Aplicados 🛠️
-
-- Laravel 12
-- PHP 8.2+
-- Blade
-- TailwindCSS
-- Alpine.js
-- Chart.js
-- Vite
-- SQLite
-- Laravel Breeze
-- MVC
-- Policies
-- Form Requests
-- Blade Components
-- Multi-tenant simples
-- Seeders
-
-## Estrutura do Projeto 📂
+### Entidades principais
 
 ```text
-app/
-  Http/
-    Controllers/
-    Requests/
-  Models/
-  Policies/
-  Support/
-bootstrap/
-config/
-database/
-  migrations/
-  seeders/
-public/
-resources/
-  css/
-  js/
-  views/
-routes/
-tests/
+User 1:N Transactions
+User 1:N Categories
+Category 1:N Transactions
 ```
 
-## Como Executar Localmente 💻
+## Segurança
+
+A aplicação utiliza os mecanismos de segurança fornecidos pelo Laravel e regras específicas do domínio:
+
+- Hash seguro de senhas.
+- Proteção CSRF nos formulários.
+- Autenticação e regeneração de sessão.
+- Rate limiting no login.
+- Validação centralizada com Form Requests.
+- Policies para impedir acesso indevido a transações de outros usuários.
+- Consultas financeiras iniciadas a partir do usuário autenticado.
+- Escape automático de conteúdo nas views Blade.
+- `APP_DEBUG=false` na configuração de produção.
+- Cookies de sessão seguros no ambiente de produção.
+
+## Testes e qualidade
+
+O projeto possui testes de autenticação, perfil, dashboard, validações, transações e autorização entre usuários.
+
+Resultados verificados:
+
+| Verificação | Resultado |
+| --- | --- |
+| `php artisan test` | 34 testes aprovados |
+| Assertions | 104 aprovadas |
+| `composer audit --locked` | 0 vulnerabilidades |
+| `npm audit --omit=dev` | 0 vulnerabilidades |
+| `npm run build` | Build concluído com sucesso |
+
+Para executar as verificações:
+
+```bash
+php artisan test
+composer audit --locked
+npm audit --omit=dev
+npm run build
+```
+
+## Instalação local
 
 ### Pré-requisitos
 
-- PHP 8.2 ou superior
-- Composer
-- Node.js e npm
-- SQLite
+- PHP 8.2 ou superior.
+- Composer.
+- Node.js e npm.
+- Extensão PDO SQLite habilitada no PHP.
 
-### Instalação
+### 1. Clone o repositório
 
 ```bash
 git clone https://github.com/NatanLuz/meu-saldo-certo.git
 cd meu-saldo-certo
-composer install
-npm install
-cp .env.example .env
-php artisan key:generate
-php artisan migrate --seed
 ```
 
-O seeder cria um usuário de teste e dados iniciais para facilitar a validação local do sistema.
+### 2. Instale as dependências
 
-### Execução
+```bash
+composer install
+npm install
+```
 
-Abra dois terminais e execute:
+### 3. Configure o ambiente
+
+Linux ou macOS:
+
+```bash
+cp .env.example .env
+```
+
+Windows PowerShell:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Gere a chave da aplicação:
+
+```bash
+php artisan key:generate
+```
+
+Para executar localmente com SQLite, ajuste as seguintes variáveis no `.env`:
+
+```env
+APP_ENV=local
+APP_DEBUG=true
+APP_URL=http://127.0.0.1:8000
+
+DB_CONNECTION=sqlite
+
+SESSION_DRIVER=file
+SESSION_SECURE_COOKIE=false
+CACHE_STORE=file
+QUEUE_CONNECTION=sync
+LOG_LEVEL=debug
+```
+
+Remova ou comente as variáveis de conexão MySQL do arquivo local.
+
+### 4. Prepare o banco de dados
+
+Linux ou macOS:
+
+```bash
+touch database/database.sqlite
+```
+
+Windows PowerShell:
+
+```powershell
+New-Item database/database.sqlite -ItemType File -Force
+```
+
+Execute as migrations:
+
+```bash
+php artisan migrate
+```
+
+O cadastro de usuário pode ser realizado pela própria aplicação. O seeder disponível adiciona categorias iniciais aos usuários que já existirem:
+
+```bash
+php artisan db:seed
+```
+
+### 5. Execute a aplicação
+
+Em um terminal:
+
+```bash
+php artisan serve
+```
+
+Em outro terminal:
 
 ```bash
 npm run dev
 ```
 
-```bash
-php artisan serve --host=127.0.0.1 --port=8000
+Acesse:
+
+```text
+http://127.0.0.1:8000
 ```
 
-Depois acesse:
+## Deploy
 
-- http://127.0.0.1:8000
+A aplicação está hospedada no **Railway** e disponível publicamente:
 
-## Testes ✅
+### [Acessar Meu Saldo Certo](https://meu-saldo-certo-production.up.railway.app)
 
-Para executar a suíte de testes:
+No ambiente de produção, dados sensíveis e configurações de infraestrutura são fornecidos por variáveis de ambiente. A configuração utiliza modo de produção, debug desabilitado e cookies seguros.
 
-```bash
-php artisan test
-```
-
-## Deploy / Aplicação Online 🌍
-
-A aplicação está hospedada no Railway e pode ser acessada no link abaixo:
-
-- https://meu-saldo-certo-production.up.railway.app
-
-O deploy foi preparado para evidenciar o projeto em ambiente real, reforçando a proposta de portfólio e permitindo navegação completa sem necessidade de instalação local.
-
-## Screenshots do Projeto 🖼️
-
-A pasta screenshots foi incluída para documentar visualmente as principais telas e reforçar a apresentação do sistema. Os arquivos foram padronizados para nomes sem acentos e em minúsculas, visando compatibilidade entre sistemas de arquivos.
+## Screenshots
 
 ### Login
 
-Tela de autenticação para entrada na aplicação.
-
-![Login](./screenshots/login.png)
+![Tela de login](./screenshots/login.png)
 
 ### Dashboard
 
-Resumo financeiro com gráfico e filtro por período.
-
-![Dashboard](./screenshots/dashboard.png)
+![Dashboard financeiro](./screenshots/dashboard.png)
 
 ### Transações
 
-Lista de movimentações com ações de cadastro, edição e exclusão.
+![Listagem de transações](./screenshots/tela-transacoes.png)
 
-![Transações](./screenshots/tela-transacoes.png)
+### Nova transação
 
-### Nova Transação
+![Formulário de nova transação](./screenshots/nova-transacao.png)
 
-Formulário para registrar uma nova movimentação financeira.
+## Aprendizados
 
-![Nova Transação](./screenshots/nova-transacao.png)
+O desenvolvimento do projeto proporcionou experiência prática em:
 
-## Banco de Dados 🗄️
+- Estruturação de uma aplicação Laravel completa.
+- Modelagem de usuários, categorias e transações.
+- Autenticação e gerenciamento de sessão.
+- Validação com Form Requests.
+- Autorização e prevenção de IDOR com Policies.
+- Isolamento de dados por usuário.
+- Construção de dashboards e gráficos financeiros.
+- Testes de integração e regras de autorização.
+- Criação de interfaces responsivas com tema claro e escuro.
+- Configuração de ambiente local e deploy em produção.
+- Auditoria de dependências e preparação de um projeto para portfólio.
 
-Entidades principais:
+## Próximas Melhorias
 
-- users
-- categories
-- transactions
+Possíveis evoluções para o projeto:
 
-Relacionamentos:
+- Ampliar a cobertura de testes de isolamento de dados.
+- Adicionar novos relatórios financeiros.
+- Evoluir os filtros e visualizações do dashboard.
+- Permitir exportação de movimentações.
+- Adicionar mais opções de personalização do perfil.
+- Aprimorar acessibilidade e experiência em dispositivos móveis.
 
-- User 1:N Transactions
-- User 1:N Categories
-- Category 1:N Transactions
+## Autor
 
-## Aprendizados no Projeto 📚
+**Natan Da Luz**
 
-- Estruturação de uma aplicação Laravel com foco em manutenção e escalabilidade.
-- Aplicação prática de validação com Form Requests e autorização com Policies.
-- Organização de uma interface financeira com foco em clareza de dados.
-- Uso de gráfico analítico para transformar dados brutos em informação útil.
-- Construção de um fluxo simples de multi-tenant por usuário.
-- Preparação de projeto com deploy e documentação mais próxima de um produto real.
+- [LinkedIn](https://www.linkedin.com/in/natandaluzdesenvolvedor/)
 
-## Autor 👨‍💻
+- [GitHub](https://github.com/NatanLuz)
 
-Natan Da Luz
-
-- E-mail: [natandaluz01@gmail.com](mailto:natandaluz01@gmail.com)
-- LinkedIn: [natandaluzdesenvolvedor](https://www.linkedin.com/in/natandaluzdesenvolvedor/)
+- [E-mail](mailto:natandaluz01@gmail.com)
 
 ## Licença
 
-Projeto licenciado sob a MIT License.
+Este projeto está licenciado sob a licença MIT.
