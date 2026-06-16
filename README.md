@@ -1,4 +1,4 @@
-# Meu Saldo Certo
+# Meu Saldo Certo 💼
 
 <p align="center">
   Sistema Financeiro pessoal para gerenciamento de receitas, despesas, categorias e saldo por usuário autenticado.
@@ -62,61 +62,20 @@ O controle financeiro pode se tornar confuso quando receitas e despesas ficam di
 - Tema claro e Dark Mode com preferência persistida no navegador.
 - Isolamento de dados por usuário.
 
-## Tecnologias utilizadas
+## Objetivo do Projeto 🎯
 
-| Camada | Tecnologias |
-| --- | --- |
-| Backend | PHP 8.2+, Laravel 12 |
-| Frontend | Blade, Tailwind CSS, Alpine.js |
-| Gráficos | Chart.js |
-| Autenticação | Laravel Breeze |
-| Banco local | SQLite |
-| Build de assets | Vite |
-| Testes | PHPUnit e testes de integração do Laravel |
-| Deploy | Railway |
+O objetivo deste projeto é demonstrar a construção de uma aplicação financeira completa com Laravel, desde a modelagem do domínio até a entrega final em produção. A proposta é evidenciar domínio de boas práticas, organização de arquitetura, responsividade, clareza de interface e preparo para deploy.
 
-## Arquitetura e boas práticas
+Além da parte funcional, o projeto foi desenhado como peça de portfólio para recrutadores, com foco em apresentação profissional, narrativa de produto e consistência visual.
 
-O projeto segue o padrão **MVC** e utiliza recursos do ecossistema Laravel para manter responsabilidades bem definidas.
+## Diferenciais 🚀
 
-### Organização da aplicação
-
-- **Controllers:** coordenam os fluxos entre requisições, domínio e views.
-- **Models:** representam as entidades e seus relacionamentos.
-- **Form Requests:** centralizam validação e normalização dos dados recebidos.
-- **Policies:** controlam a autorização sobre as transações.
-- **Blade Components:** reutilizam elementos de interface e mantêm consistência visual.
-- **Seeders:** disponibilizam categorias iniciais para usuários existentes.
-
-### Conceitos aplicados
-
-- MVC.
-- Form Requests.
-- Policies.
-- Blade Components.
-- Relacionamentos Eloquent.
-- Mass assignment controlado.
-- Multi-tenant simples por usuário.
-- Isolamento de dados nas consultas e autorizações.
-- Filtros financeiros baseados na data da transação.
-- Responsividade e Dark Mode com Tailwind CSS.
-
-### Entidades principais
-
-```text
-User 1:N Transactions
-User 1:N Categories
-Category 1:N Transactions
-```
-
-## Segurança
-
-A aplicação utiliza os mecanismos de segurança fornecidos pelo Laravel e regras específicas do domínio:
-
-- Hash seguro de senhas.
-- Proteção CSRF nos formulários.
-- Autenticação e regeneração de sessão.
-- Rate limiting no login.
+- Dashboard com consolidação dinâmica de dados financeiros.
+- Gráfico analítico para leitura rápida da evolução financeira.
+- Filtro por período para análise das movimentações.
+- CRUD completo de transações com fluxo organizado.
+- Categorias vinculadas a cada usuário autenticado.
+- Implementação de multi-tenant simples com isolamento por usuário.
 - Validação centralizada com Form Requests.
 - Policies para impedir acesso indevido a transações de outros usuários.
 - Consultas financeiras iniciadas a partir do usuário autenticado.
