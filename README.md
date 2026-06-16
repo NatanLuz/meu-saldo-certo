@@ -1,7 +1,7 @@
 # Meu Saldo Certo 💼
 
 <p align="center">
-  Sistema Financeiro pessoal para gerenciamento de receitas, despesas, categorias e saldo por usuário autenticado.
+  Sistema Financeiro para gerenciamento de receitas, despesas, categorias e saldo por usuário autenticado.
 </p>
 
 <p align="center">
