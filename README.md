@@ -52,7 +52,7 @@ O objetivo deste projeto é demonstrar a construção de uma aplicação finance
 
 Além da parte funcional, o projeto foi desenhado como peça de portfólio para recrutadores, com foco em apresentação profissional, narrativa de produto e consistência visual.
 
-## Diferenciais 🚀
+## Diferenciais
 
 - Dashboard com consolidação dinâmica de dados financeiros.
 - Gráfico analítico para leitura rápida da evolução financeira.
