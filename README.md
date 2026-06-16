@@ -249,17 +249,6 @@ O desenvolvimento do projeto proporcionou experiência prática em:
 - Configuração de ambiente local e deploy em produção.
 - Auditoria de dependências e preparação de um projeto para portfólio.
 
-## Próximas Melhorias
-
-Possíveis evoluções para o projeto:
-
-- Ampliar a cobertura de testes de isolamento de dados.
-- Adicionar novos relatórios financeiros.
-- Evoluir os filtros e visualizações do dashboard.
-- Permitir exportação de movimentações.
-- Adicionar mais opções de personalização do perfil.
-- Aprimorar acessibilidade e experiência em dispositivos móveis.
-
 ## Autor
 
 **Natan Da Luz**
