@@ -223,19 +223,15 @@ No ambiente de produção, dados sensíveis e configurações de infraestrutura 
 
 ## Screenshots
 
-### Login
+## Login
 
 ![Tela de login](./screenshots/login.png)
 
-### Dashboard
+## Dashboard
 
 ![Dashboard financeiro](./screenshots/dashboard.png)
 
-### Transações
-
-![Listagem de transações](./screenshots/tela-transacoes.png)
-
-### Nova transação
+## Nova transação
 
 ![Formulário de nova transação](./screenshots/nova-transacao.png)
 
