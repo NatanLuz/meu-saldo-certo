@@ -272,8 +272,6 @@ Possíveis evoluções para o projeto:
 
 - [LinkedIn](https://www.linkedin.com/in/natandaluzdesenvolvedor/)
 
-- [GitHub](https://github.com/NatanLuz)
-
 - [E-mail](mailto:natandaluz01@gmail.com)
 
 ## Licença
