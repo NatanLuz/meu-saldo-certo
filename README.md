@@ -32,6 +32,7 @@ O projeto nasceu de uma necessidade real. Durante um período de reorganização
 Os principais objetivos foram:
 
 - Resolver um problema real com software.
+
 - Construir um sistema funcional e utilizável.
 
 ## Problema que resolve
@@ -83,7 +84,7 @@ Além da parte funcional, o projeto foi desenhado como peça de portfólio para 
 
 ## Testes e qualidade
 
-O projeto possui testes de autenticação, perfil, dashboard, validações, transações e autorização entre usuários.
+O projeto possui testes de autenticação, perfil, dashboard, validações, transações e autorização entre usuários,tudo completo e conferido.
 
 Resultados verificados:
 
