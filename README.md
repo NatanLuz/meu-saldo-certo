@@ -1,4 +1,4 @@
-# Meu Saldo Certo 💼
+# Meu Saldo Certo 
 
 <p align="center">
   Sistema Financeiro para gerenciamento de receitas, despesas, categorias e saldo por usuário autenticado.
@@ -25,7 +25,7 @@
 
 ## Sobre o projeto
 
-O **Meu Saldo Certo** é uma aplicação web desenvolvida em Laravel para organizar a vida financeira pessoal. O sistema permite registrar movimentações, acompanhar receitas e despesas, consultar o saldo consolidado e analisar os dados por meio de filtros e gráficos.
+O **Meu Saldo Certo** é uma Aplicação Web desenvolvida em Laravel para organizar a vida financeira pessoal. O sistema permite registrar movimentações, acompanhar receitas e despesas, consultar o saldo consolidado e analisar os dados por meio de filtros e gráficos.
 
 O projeto nasceu de uma necessidade real. Durante um período de reorganização financeira familiar, tornou-se necessário acompanhar entradas, saídas e saldo de forma simples e prática. Em vez de utilizar uma solução pronta, optei por desenvolver uma aplicação própria e transformar esse desafio em uma oportunidade de aprofundar meus conhecimentos em Laravel.
 
@@ -40,9 +40,13 @@ Os principais objetivos foram:
 O controle financeiro pode se tornar confuso quando receitas e despesas ficam distribuídas entre anotações, planilhas e diferentes aplicativos. O Meu Saldo Certo centraliza essas informações em uma interface única, permitindo:
 
 - Visualizar rapidamente a situação financeira.
+
 - Registrar e classificar movimentações.
+
 - Consultar o histórico por período.
+
 - Identificar receitas, despesas e saldo consolidado.
+
 - Manter os dados separados por usuário autenticado.
 
 ## Funcionalidades
@@ -110,8 +114,11 @@ npm run build
 ### Pré-requisitos
 
 - PHP 8.2 ou superior.
+
 - Composer.
+
 - Node.js e npm.
+
 - Extensão PDO SQLite habilitada no PHP.
 
 ### 1. Clone o repositório
