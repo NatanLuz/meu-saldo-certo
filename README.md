@@ -16,10 +16,6 @@
   <a href="https://meu-saldo-certo-production.up.railway.app">
     <img alt="Aplicação online" src="https://img.shields.io/badge/Acessar_aplicação-Online-16A34A?style=for-the-badge&logo=railway&logoColor=white">
   </a>
-  <a href="https://github.com/NatanLuz/meu-saldo-certo">
-    <img alt="Repositório no GitHub" src="https://img.shields.io/badge/GitHub-Repositório-181717?style=for-the-badge&logo=github&logoColor=white">
-  </a>
-</p>
 
 ---
 
