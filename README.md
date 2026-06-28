@@ -255,7 +255,7 @@ O desenvolvimento do projeto proporcionou experiência prática em:
 - Testes de integração e regras de autorização.
 - Criação de interfaces responsivas com tema claro e escuro.
 - Configuração de ambiente local e deploy em produção.
-- Auditoria de dependências e preparação de um projeto para portfólio.
+- Auditoria de dependências.
 
 ## Autor
 
