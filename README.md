@@ -256,7 +256,7 @@ O desenvolvimento do projeto proporcionou experiência prática em:
 - Configuração de ambiente local e deploy em produção.
 - Auditoria de dependências.
 
-## Autor
+## Autor / Contato
 
 **Natan Da Luz**
 
