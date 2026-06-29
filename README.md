@@ -64,7 +64,6 @@ O controle financeiro pode se tornar confuso quando receitas e despesas ficam di
 ## Objetivo do Projeto 🎯
 
 O objetivo deste projeto é demonstrar a construção de uma aplicação financeira completa com Laravel, desde a modelagem do domínio até a entrega final em produção. A proposta é evidenciar domínio de boas práticas, organização de arquitetura, responsividade, clareza de interface e preparo para deploy.
-
 Além da parte funcional, o projeto foi desenhado como peça de portfólio para recrutadores, com foco em apresentação profissional, narrativa de produto e consistência visual.
 
 ## Diferenciais 🚀
