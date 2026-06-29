@@ -234,6 +234,12 @@ No ambiente de produção, dados sensíveis e configurações de infraestrutura 
 ![Dashboard financeiro](./screenshots/dashboard.png)
 
 ## Nova transação
+=======
+### Transações
+
+![Listagem de transações](./screenshots/transacoes.png)
+
+### Nova transação
 
 ![Formulário de nova transação](./screenshots/nova-transacao.png)
 
