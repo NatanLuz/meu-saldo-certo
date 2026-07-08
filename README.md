@@ -28,7 +28,6 @@ O projeto nasceu de uma necessidade real. Durante um período de reorganização
 Os principais objetivos foram:
 
 - Resolver um problema real com software.
-
 - Construir um sistema funcional e utilizável.
 
 ## Problema que resolve
