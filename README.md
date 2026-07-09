@@ -80,7 +80,7 @@ Além da parte funcional, o projeto foi desenhado como peça de portfólio para 
 - `APP_DEBUG=false` na configuração de produção.
 - Cookies de sessão seguros no ambiente de produção.
 
-## Testes e qualidade
+## Testes e Qualidade
 
 O projeto possui testes de autenticação, perfil, dashboard, validações, transações e autorização entre usuários,tudo completo e conferido.
 
