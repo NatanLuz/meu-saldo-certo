@@ -1,265 +1,268 @@
-# Meu Saldo Certo 
+# Meu Saldo Certo
+
+Sistema web de controle financeiro pessoal desenvolvido em Laravel, permitindo o gerenciamento de receitas, despesas, categorias e acompanhamento financeiro por meio de dashboard com gráficos.
 
 <p align="center">
-  Sistema Financeiro para gerenciamento de receitas, despesas, categorias e saldo por usuário autenticado, simples prático e rápido !
-</p>
-
-<p align="center">
+  <img alt="PHP 8.3" src="https://img.shields.io/badge/PHP-8.3-777BB4?style=for-the-badge&logo=php&logoColor=white">
   <img alt="Laravel 12" src="https://img.shields.io/badge/Laravel-12-FF2D20?style=for-the-badge&logo=laravel&logoColor=white">
-  <img alt="PHP 8.2+" src="https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php&logoColor=white">
+  <img alt="MySQL 8" src="https://img.shields.io/badge/MySQL-8-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+  <img alt="Docker" src="https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white">
   <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white">
-  <img alt="SQLite" src="https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite&logoColor=white">
-  <img alt="Railway" src="https://img.shields.io/badge/Deploy-Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white">
 </p>
 
-<p align="center">
-  <a href="https://meu-saldo-certo-production.up.railway.app">
-    <img alt="Aplicação online" src="https://img.shields.io/badge/Acessar_aplicação-Online-16A34A?style=for-the-badge&logo=railway&logoColor=white">
-  </a>
+## Sobre o Projeto
 
----
+O **Meu Saldo Certo** é uma aplicação web para controle financeiro pessoal. O sistema permite registrar movimentações financeiras, classificar receitas e despesas por categorias, acompanhar o saldo atual e visualizar dados consolidados em um dashboard.
 
-## Sobre o projeto
-
-O **Meu Saldo Certo** é uma Aplicação Web desenvolvida em Laravel para organizar a vida financeira pessoal. O sistema permite registrar movimentações, acompanhar receitas e despesas, consultar o saldo consolidado e analisar os dados por meio de filtros e gráficos.
-
-O projeto nasceu de uma necessidade real. Durante um período de reorganização financeira familiar, tornou-se necessário acompanhar entradas, saídas e saldo de forma simples e prática. Em vez de utilizar uma solução pronta, optei por desenvolver uma aplicação própria e transformar esse desafio em uma oportunidade de aprofundar meus conhecimentos em Laravel.
-
-Os principais objetivos foram:
-
-- Resolver um problema real com software.
-- Construir um sistema funcional e utilizável.
-
-## Problema que resolve
-
-O controle financeiro pode se tornar confuso quando receitas e despesas ficam distribuídas entre anotações, planilhas e diferentes aplicativos. O Meu Saldo Certo centraliza essas informações em uma interface única, permitindo:
-
-- Visualizar rapidamente a situação financeira.
-
-- Registrar e classificar movimentações.
-
-- Consultar o histórico por período.
-
-- Identificar receitas, despesas e saldo consolidado.
-
-- Manter os dados separados por usuário autenticado.
+O projeto foi desenvolvido como aplicação de portfólio profissional, com foco em organização de código, uso adequado dos recursos do Laravel, separação de responsabilidades e preparação para execução em ambiente Docker.
 
 ## Funcionalidades
 
-- Cadastro de usuários.
-- Login, logout e recuperação de senha.
+- Cadastro e autenticação de usuários com Laravel Breeze.
+- Login e logout.
 - Dashboard financeiro.
-- Registro de receitas e despesas.
-- Organização das movimentações por categorias.
-- Saldo consolidado.
-- Gráfico financeiro.
+- Visualização de receitas, despesas e saldo atual.
+- Gráficos financeiros utilizando Chart.js.
+- CRUD de receitas.
+- CRUD de despesas.
+- Cadastro de categorias associadas às movimentações.
 - Filtros por período.
-- Cadastro, listagem, edição e exclusão de transações.
-- Perfil do usuário.
-- Interface responsiva.
-- Tema claro e Dark Mode com preferência persistida no navegador.
-- Isolamento de dados por usuário.
+- Paginação.
+- Validação com Form Requests.
+- Autorização com Policies.
+- Separação de dados por usuário autenticado.
+- Modelagem de banco de dados relacional.
 
-## Objetivo do Projeto 🎯
+## Stack Utilizada
 
-O objetivo deste projeto é demonstrar a construção de uma aplicação financeira completa com Laravel, desde a modelagem do domínio até a entrega final em produção. A proposta é evidenciar domínio de boas práticas, organização de arquitetura, responsividade, clareza de interface e preparo para deploy.
-Além da parte funcional, o projeto foi desenhado como peça de portfólio para recrutadores, com foco em apresentação profissional, narrativa de produto e consistência visual.
+- PHP 8.3
+- Laravel 12
+- MySQL 8
+- Docker
+- Docker Compose
+- Apache
+- Composer
+- Node.js
+- Vite
+- Blade
+- Tailwind CSS
+- JavaScript
+- Chart.js
 
-## Diferenciais 🚀
+## Arquitetura do Projeto
 
-- Dashboard com consolidação dinâmica de dados financeiros.
-- Gráfico analítico para leitura rápida da evolução financeira.
-- Filtro por período para análise das movimentações.
-- CRUD completo de transações com fluxo organizado.
-- Categorias vinculadas a cada usuário autenticado.
-- Implementação de multi-tenant simples com isolamento por usuário.
-- Validação centralizada com Form Requests.
-- Policies para impedir acesso indevido a transações de outros usuários.
-- Consultas financeiras iniciadas a partir do usuário autenticado.
-- Escape automático de conteúdo nas views Blade.
-- `APP_DEBUG=false` na configuração de produção.
-- Cookies de sessão seguros no ambiente de produção.
+O projeto utiliza a arquitetura MVC do Laravel, separando responsabilidades entre rotas, controllers, models, views, requests, policies e migrations.
 
-## Testes e Qualidade
+![Arquitetura do Projeto](screenshots/Arquiteturaprojeto.png)
 
-O projeto possui testes de autenticação, perfil, dashboard, validações, transações e autorização entre usuários,tudo completo e conferido.
+### Organização Técnica
 
-Resultados verificados:
+- `app/Http/Controllers`: controllers responsáveis pelos fluxos web.
+- `app/Http/Requests`: validações centralizadas com Form Requests.
+- `app/Models`: entidades principais da aplicação.
+- `app/Policies`: regras de autorização por usuário.
+- `database/migrations`: estrutura relacional do banco de dados.
+- `resources/views`: telas Blade da aplicação.
+- `resources/js` e `resources/css`: assets compilados pelo Vite.
+- `routes/web.php`: definição das rotas web protegidas por autenticação.
 
-| Verificação | Resultado |
-| --- | --- |
-| `php artisan test` | 34 testes aprovados |
-| Assertions | 104 aprovadas |
-| `composer audit --locked` | 0 vulnerabilidades |
-| `npm audit --omit=dev` | 0 vulnerabilidades |
-| `npm run build` | Build concluído com sucesso |
-
-Para executar as verificações:
-
-```bash
-php artisan test
-composer audit --locked
-npm audit --omit=dev
-npm run build
-```
-
-## Instalação local
+## Executando com Docker
 
 ### Pré-requisitos
 
-- PHP 8.2 ou superior.
+- Docker
+- Docker Compose
+- Git
 
-- Composer.
-
-- Node.js e npm.
-
-- Extensão PDO SQLite habilitada no PHP.
-
-### 1. Clone o repositório
+### 1. Clonar o Projeto
 
 ```bash
 git clone https://github.com/NatanLuz/meu-saldo-certo.git
 cd meu-saldo-certo
 ```
 
-### 2. Instale as dependências
+### 2. Configurar o Arquivo `.env`
 
-```bash
-composer install
-npm install
-```
-
-### 3. Configure o ambiente
-
-Linux ou macOS:
+Copie o arquivo de exemplo:
 
 ```bash
 cp .env.example .env
 ```
 
-Windows PowerShell:
+No Windows PowerShell:
 
 ```powershell
 Copy-Item .env.example .env
 ```
 
-Gere a chave da aplicação:
-
-```bash
-php artisan key:generate
-```
-
-Para executar localmente com SQLite, ajuste as seguintes variáveis no `.env`:
+Para executar com Docker Compose, configure o banco usando o nome do serviço MySQL:
 
 ```env
-APP_ENV=local
-APP_DEBUG=true
-APP_URL=http://127.0.0.1:8000
-
-DB_CONNECTION=sqlite
-
-SESSION_DRIVER=file
-SESSION_SECURE_COOKIE=false
-CACHE_STORE=file
-QUEUE_CONNECTION=sync
-LOG_LEVEL=debug
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=meu_saldo_certo
+DB_USERNAME=meu_saldo_certo
+DB_PASSWORD=secret
 ```
 
-Remova ou comente as variáveis de conexão MySQL do arquivo local.
+Também é recomendado manter:
 
-### 4. Prepare o banco de dados
+```env
+SESSION_DRIVER=database
+CACHE_STORE=database
+QUEUE_CONNECTION=database
+```
 
-Linux ou macOS:
+### 3. Subir os Containers
 
 ```bash
-touch database/database.sqlite
+docker compose up -d --build
 ```
 
-Windows PowerShell:
+Esse comando cria e inicia:
 
-```powershell
-New-Item database/database.sqlite -ItemType File -Force
-```
+- container Laravel + Apache + PHP;
+- container MySQL 8;
+- volume persistente para o banco;
+- rede interna para comunicação entre aplicação e banco.
 
-Execute as migrations:
+### 4. Executar as Migrations
 
 ```bash
-php artisan migrate
+docker compose exec app php artisan migrate
 ```
 
-O cadastro de usuário pode ser realizado pela própria aplicação. O seeder disponível adiciona categorias iniciais aos usuários que já existirem:
+### 5. Criar Link de Storage, se Necessário
 
 ```bash
-php artisan db:seed
+docker compose exec app php artisan storage:link
 ```
 
-### 5. Execute a aplicação
+### 6. Criar Usuário Inicial
 
-Em um terminal:
+O cadastro pode ser feito pela própria tela da aplicação.
+
+Caso seja necessário criar um usuário de teste pelo terminal, o projeto possui o comando:
 
 ```bash
-php artisan serve
+docker compose exec app php artisan make:test-user
 ```
 
-Em outro terminal:
-
-```bash
-npm run dev
-```
-
-Acesse:
+### 7. Acessar a Aplicação
 
 ```text
-http://127.0.0.1:8000
+http://localhost:8000
 ```
 
-## Deploy
+## Variáveis de Ambiente
 
-A aplicação está hospedada no **Railway** e disponível publicamente:
+Principais variáveis utilizadas para conexão com o MySQL:
 
-No ambiente de produção, dados sensíveis e configurações de infraestrutura são fornecidos por variáveis de ambiente. A configuração utiliza modo de produção, debug desabilitado e cookies seguros.
+```env
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=meu_saldo_certo
+DB_USERNAME=meu_saldo_certo
+DB_PASSWORD=secret
+```
+
+Descrição:
+
+- `DB_CONNECTION`: driver de banco utilizado pelo Laravel.
+- `DB_HOST`: host do banco. No Docker Compose, deve ser o nome do serviço `mysql`.
+- `DB_PORT`: porta interna do MySQL no container.
+- `DB_DATABASE`: nome do banco de dados da aplicação.
+- `DB_USERNAME`: usuário utilizado pela aplicação.
+- `DB_PASSWORD`: senha do usuário da aplicação.
+
+Em produção, esses valores devem ser definidos no provedor de hospedagem, sem versionar credenciais reais no repositório.
+
+## Segurança e Boas Práticas
+
+- Autenticação implementada com Laravel Breeze.
+- Rotas principais protegidas por autenticação.
+- Validação de entrada centralizada com Form Requests.
+- Policies utilizadas para autorização de acesso às transações.
+- Separação de dados por usuário autenticado.
+- Uso de variáveis de ambiente para configurações sensíveis.
+- Senhas armazenadas com hash pelo mecanismo padrão do Laravel.
+- Views Blade com escape automático de saída.
+- Banco de dados relacional com chaves estrangeiras e migrations versionadas.
+- Ambiente Docker separado em containers de aplicação e banco.
+
+## Testes
+
+O projeto está preparado para execução de testes automatizados com PHPUnit.
+
+Para executar a suíte de testes:
+
+```bash
+php artisan test
+```
+
+Em ambiente Docker:
+
+```bash
+docker compose exec app php artisan test
+```
 
 ## Screenshots
 
-## Login
+### Login
 
-![Tela de login](./screenshots/login.png)
+![Tela de login](screenshots/login.png)
 
-## Dashboard
+### Dashboard
 
-![Dashboard financeiro](./screenshots/dashboard.png)
+![Dashboard financeiro](screenshots/dashboard.png)
 
 ### Transações
 
-![Listagem de transações](./screenshots/transacoes.png)
+![Listagem de transações](screenshots/transacoes.png)
 
-### Nova transação
+### Nova Transação
 
-![Formulário de nova transação](./screenshots/nova-transacao.png)
+![Formulário de nova transação](screenshots/nova-transacao.png)
 
-## Aprendizados
+### Perfil
 
-O desenvolvimento do projeto proporcionou experiência prática em:
+![Tela de perfil](screenshots/perfil.png)
 
-- Estruturação de uma aplicação Laravel completa.
-- Modelagem de usuários, categorias e transações.
-- Autenticação e gerenciamento de sessão.
-- Validação com Form Requests.
-- Autorização e prevenção de IDOR com Policies.
-- Isolamento de dados por usuário.
-- Construção de dashboards e gráficos financeiros.
-- Testes de integração e regras de autorização.
-- Criação de interfaces responsivas com tema claro e escuro.
-- Configuração de ambiente local e deploy em produção.
-- Auditoria de dependências.
+### Arquitetura do Projeto
 
-## Autor / Contato
+![Arquitetura do Projeto](screenshots/Arquiteturaprojeto.png)
 
-**Natan Da Luz**
+## Versão Atual
 
-- [LinkedIn](https://www.linkedin.com/in/natandaluzdesenvolvedor/)
+**v1.1.0**
 
-- [E-mail](mailto:natandaluz01@gmail.com)
+Mudanças desta versão:
+
+- Dockerização completa.
+- Configuração com Docker Compose.
+- MySQL containerizado.
+- Preparação para ambiente de produção.
+- Melhorias na configuração Laravel para uso com MySQL.
+
+## Deploy
+
+Esta seção está preparada para receber as informações de publicação da aplicação.
+
+Informações previstas:
+
+- URL da aplicação publicada.
+- Plataforma utilizada para deploy.
+- Variáveis de ambiente configuradas em produção.
+
+## Autor
+
+**Natan Da Luz Cândido**<br>
+Desenvolvedor Backend PHP/Laravel
+
+- GitHub: [https://github.com/NatanLuz](https://github.com/NatanLuz)
+- LinkedIn: [https://linkedin.com/in/natandaluz](https://linkedin.com/in/natandaluz)
 
 ## Licença
 
