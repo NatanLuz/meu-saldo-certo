@@ -217,8 +217,6 @@ http://127.0.0.1:8000
 
 A aplicação está hospedada no **Railway** e disponível publicamente:
 
-### [Acessar Meu Saldo Certo](https://meu-saldo-certo-production.up.railway.app)
-
 No ambiente de produção, dados sensíveis e configurações de infraestrutura são fornecidos por variáveis de ambiente. A configuração utiliza modo de produção, debug desabilitado e cookies seguros.
 
 ## Screenshots
