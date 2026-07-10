@@ -28,7 +28,6 @@ O projeto nasceu de uma necessidade real. Durante um período de reorganização
 Os principais objetivos foram:
 
 - Resolver um problema real com software.
-
 - Construir um sistema funcional e utilizável.
 
 ## Problema que resolve
@@ -81,7 +80,7 @@ Além da parte funcional, o projeto foi desenhado como peça de portfólio para 
 - `APP_DEBUG=false` na configuração de produção.
 - Cookies de sessão seguros no ambiente de produção.
 
-## Testes e qualidade
+## Testes e Qualidade
 
 O projeto possui testes de autenticação, perfil, dashboard, validações, transações e autorização entre usuários,tudo completo e conferido.
 
@@ -218,8 +217,6 @@ http://127.0.0.1:8000
 
 A aplicação está hospedada no **Railway** e disponível publicamente:
 
-### [Acessar Meu Saldo Certo](https://meu-saldo-certo-production.up.railway.app)
-
 No ambiente de produção, dados sensíveis e configurações de infraestrutura são fornecidos por variáveis de ambiente. A configuração utiliza modo de produção, debug desabilitado e cookies seguros.
 
 ## Screenshots
@@ -256,7 +253,7 @@ O desenvolvimento do projeto proporcionou experiência prática em:
 - Configuração de ambiente local e deploy em produção.
 - Auditoria de dependências.
 
-## Autor
+## Autor / Contato
 
 **Natan Da Luz**
 
