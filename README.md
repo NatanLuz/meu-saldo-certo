@@ -269,9 +269,9 @@ Informações previstas:
 **Natan Da Luz**
 
 - LinkedIn: [linkedin.com/in/natandaluz](https://www.linkedin.com/in/natandaluz/)
-- 
+  
 - Portfólio: [portfolionatan.vercel.app](https://portfolionatan.vercel.app/)
-- 
+  
 - E-mail: [natandaluz01@gmail.com](mailto:natandaluz01@gmail.com)
 
 ## Licença
