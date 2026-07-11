@@ -46,6 +46,7 @@ RUN apt-get update \
         libonig-dev \
         libxml2-dev \
         libzip-dev \
+        libicu-dev \
         unzip \
     && docker-php-ext-install -j"$(nproc)" \
         bcmath \
