@@ -264,13 +264,15 @@ Informações previstas:
 - Plataforma utilizada para deploy.
 - Variáveis de ambiente configuradas em produção.
 
-## Autor
+## 👤 Autor
 
-**Natan Da Luz Cândido**<br>
-Desenvolvedor Backend PHP/Laravel
+**Natan Da Luz**
 
-- GitHub: [https://github.com/NatanLuz](https://github.com/NatanLuz)
-- LinkedIn: [https://linkedin.com/in/natandaluz](https://linkedin.com/in/natandaluz)
+- LinkedIn: [linkedin.com/in/natandaluz](https://www.linkedin.com/in/natandaluz/)
+- 
+- Portfólio: [portfolionatan.vercel.app](https://portfolionatan.vercel.app/)
+- 
+- E-mail: [natandaluz01@gmail.com](mailto:natandaluz01@gmail.com)
 
 ## Licença
 
