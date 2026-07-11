@@ -12,6 +12,10 @@ Route::get('/', function () {
         : redirect()->route('login');
 });
 
+Route::get('/healthz', function () {
+    return response()->json(['status' => 'ok']);
+});
+
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', DashboardController::class)->name('dashboard');
 
