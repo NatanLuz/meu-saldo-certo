@@ -258,12 +258,6 @@ Mudanças desta versão:
 
 Link: https://meu-saldo-certo-9o9r.onrender.com
 
-Informações previstas:
-
-- URL da aplicação publicada.
-- Plataforma utilizada para deploy.
-- Variáveis de ambiente configuradas em produção.
-
 ## 👤 Autor
 
 **Natan Da Luz**
