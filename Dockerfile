@@ -50,6 +50,7 @@ RUN apt-get update \
     && docker-php-ext-install -j"$(nproc)" \
         bcmath \
         curl \
+        intl \
         mbstring \
         pdo_mysql \
         xml \
@@ -69,6 +70,7 @@ COPY . .
 # Copies optimized Composer dependencies and the Vite production build from previous stages.
 COPY --from=composer /app/vendor ./vendor
 COPY --from=assets /app/public/build ./public/build
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 # Discovers Laravel packages after the production dependencies are available.
 RUN php artisan package:discover --ansi
@@ -82,8 +84,11 @@ RUN mkdir -p \
         storage/logs \
         bootstrap/cache \
     && chown -R www-data:www-data storage bootstrap/cache \
-    && chmod -R 775 storage bootstrap/cache
+    && chmod -R 775 storage bootstrap/cache \
+    && chmod +x /usr/local/bin/docker-entrypoint.sh
 
 EXPOSE 80
+
+ENTRYPOINT ["docker-entrypoint.sh"]
 
 CMD ["apache2-foreground"]
