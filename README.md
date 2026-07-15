@@ -41,7 +41,7 @@ O projeto foi desenvolvido como aplicação de portfólio profissional, com foco
 - Separação de dados por usuário autenticado.
 - Modelagem de banco de dados relacional.
 
-## Stack Utilizada
+## Stack Do Projeto
 
 - PHP 8.3
 - Laravel 12
