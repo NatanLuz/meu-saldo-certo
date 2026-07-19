@@ -1,6 +1,3 @@
-
-## Meu Saldo Certo
-
 Sistema Web de controle financeiro pessoal desenvolvido em Laravel, permitindo o gerenciamento de receitas, despesas, categorias e acompanhamento financeiro por meio de dashboard com gráficos.
 
 ## Meu Saldo Certo 
