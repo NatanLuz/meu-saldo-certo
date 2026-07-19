@@ -60,7 +60,7 @@ O projeto utiliza a arquitetura MVC do Laravel, separando responsabilidades entr
 
 ![Arquitetura do Projeto](screenshots/Arquiteturaprojeto.png)
 
-### Organização Técnica
+## Organização Técnica
 
 - `app/Http/Controllers`: controllers responsáveis pelos fluxos web.
 - `app/Http/Requests`: validações centralizadas com Form Requests.
@@ -73,7 +73,7 @@ O projeto utiliza a arquitetura MVC do Laravel, separando responsabilidades entr
 
 ## Executando com Docker
 
-### Pré-requisitos
+## Pré-requisitos
 
 - Docker
 - Docker Compose
