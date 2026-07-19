@@ -40,9 +40,9 @@ O projeto foi desenvolvido como aplicação de portfólio profissional, com foco
 
 ## Stack Do Projeto
 
-- PHP 8.3
-- Laravel 12
-- MySQL 8
+- PHP
+- Laravel 
+- MySQL
 - Docker
 - Docker Compose
 - Apache
