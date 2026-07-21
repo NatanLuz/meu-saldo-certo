@@ -130,7 +130,7 @@ Esse comando cria e inicia:
 - volume persistente para o banco;
 - rede interna para comunicação entre aplicação e banco.
 
-### 4. Executar as Migrations
+### 4. Executar as Migrations do projeto
 
 ```bash
 docker compose exec app php artisan migrate
