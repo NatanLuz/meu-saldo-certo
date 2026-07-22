@@ -92,7 +92,7 @@ Copie o arquivo de exemplo:
 cp .env.example .env
 ```
 
-No Windows PowerShell:
+Windows PowerShell:
 
 ```powershell
 Copy-Item .env.example .env
