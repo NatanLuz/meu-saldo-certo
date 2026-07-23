@@ -144,7 +144,7 @@ docker compose exec app php artisan storage:link
 
 ### 6. Criar Usuário Inicial
 
-O cadastro pode ser feito pela própria tela da aplicação.
+O cadastro pode ser feito pela própria tela da aplicação acessando o link.
 
 Caso seja necessário criar um usuário de teste pelo terminal, o projeto possui o comando:
 
