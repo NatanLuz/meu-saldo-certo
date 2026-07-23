@@ -56,7 +56,7 @@ O projeto foi desenvolvido como aplicação de portfólio profissional, com foco
 
 ## Arquitetura do Projeto
 
-O projeto utiliza a arquitetura MVC do Laravel, separando responsabilidades entre rotas, controllers, models, views, requests, policies e migrations.
+O projeto utiliza a arquitetura em MVC do Laravel, separando responsabilidades entre rotas, controllers, models, views, requests, policies e migrations.
 
 ![Arquitetura do Projeto](screenshots/Arquiteturaprojeto.png)
 
