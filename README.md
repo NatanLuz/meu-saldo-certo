@@ -71,7 +71,7 @@ O projeto utiliza a arquitetura MVC do Laravel, separando responsabilidades entr
 - `resources/js` e `resources/css`: assets compilados pelo Vite.
 - `routes/web.php`: definição das rotas web protegidas por autenticação.
 
-## Pré-requisitos
+## Pré-requisitos para o projeto
 
 - Docker
 - Docker Compose
