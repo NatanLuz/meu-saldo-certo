@@ -182,7 +182,7 @@ Descrição:
 
 Em produção, esses valores devem ser definidos no provedor de hospedagem, sem versionar credenciais reais no repositório.
 
-## Segurança e Boas Práticas
+# Segurança e Boas Práticas
 
 - Autenticação implementada com Laravel Breeze.
 - Rotas principais protegidas por autenticação.
@@ -213,27 +213,27 @@ docker compose exec app php artisan test
 
 ## Screenshots
 
-### Login
+## Login
 
 ![Tela de login](screenshots/login.png)
 
-### Dashboard
+## Dashboard
 
 ![Dashboard financeiro](screenshots/dashboard.png)
 
-### Transações
+## Transações
 
 ![Listagem de transações](screenshots/transacoes.png)
 
-### Nova Transação
+## Nova Transação
 
 ![Formulário de nova transação](screenshots/nova-transacao.png)
 
-### Perfil
+## Perfil
 
 ![Tela de perfil](screenshots/perfil.png)
 
-### Arquitetura do Projeto
+## Arquitetura do Projeto
 
 ![Arquitetura do Projeto](screenshots/Arquiteturaprojeto.png)
 
