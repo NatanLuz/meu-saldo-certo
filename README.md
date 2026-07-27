@@ -136,7 +136,7 @@ Esse comando cria e inicia:
 docker compose exec app php artisan migrate
 ```
 
-### 5. Criar Link de Storage, se Necessário
+### 5. Criar Link de Storage, se necessário
 
 ```bash
 docker compose exec app php artisan storage:link
