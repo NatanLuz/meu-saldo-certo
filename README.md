@@ -60,7 +60,7 @@ O projeto utiliza a arquitetura em MVC do Laravel, separando responsabilidades e
 
 ![Arquitetura do Projeto](screenshots/Arquiteturaprojeto.png)
 
-## Organização Técnica
+## Organização Técnica do Projeto
 
 - `app/Http/Controllers`: controllers responsáveis pelos fluxos web.
 - `app/Http/Requests`: validações centralizadas com Form Requests.
@@ -71,7 +71,7 @@ O projeto utiliza a arquitetura em MVC do Laravel, separando responsabilidades e
 - `resources/js` e `resources/css`: assets compilados pelo Vite.
 - `routes/web.php`: definição das rotas web protegidas por autenticação.
 
-## Pré-requisitos para o projeto
+## Pré-requisitos para o projeto (recomendo para execução e teste no seu pc)
 
 - Docker
 - Docker Compose
