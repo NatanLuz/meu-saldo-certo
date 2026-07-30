@@ -244,9 +244,13 @@ docker compose exec app php artisan test
 Mudanças desta versão:
 
 - Dockerização completa.
+
 - Configuração com Docker Compose.
+
 - MySQL containerizado.
+
 - Preparação para ambiente de produção.
+
 - Melhorias na configuração Laravel para uso com MySQL.
 
 ## Deploy
