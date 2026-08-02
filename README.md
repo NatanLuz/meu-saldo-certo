@@ -3,7 +3,7 @@ Sistema Web para controle financeiro pessoal desenvolvido em Laravel, permitindo
 ## Meu Saldo Certo 
 
 <p align="center">
-  Um Sistema Financeiro para gerenciamento de receitas, despesas, categorias e saldo por usuário autenticado, simples prático e rápido !
+  Um Sistema Financeiro para gerenciamento de receitas, despesas, categorias e saldo por usuário autenticado, simples prático e rápido sem enrolação !
 </p>
 
 <p align="center">
