@@ -73,7 +73,9 @@ O projeto utiliza a arquitetura em MVC do própio Laravel, separando responsabil
 ## Pré-Requisitos para o projeto (recomendo para execução e teste no seu pc)
 
 - Docker
+  
 - Docker Compose
+  
 - Git
 
 ### 1. Clonar o Projeto
