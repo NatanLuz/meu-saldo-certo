@@ -20,7 +20,7 @@ O **Meu Saldo Certo** é uma aplicação web para controle financeiro pessoal. O
 
 O projeto foi desenvolvido como aplicação de portfólio profissional, com foco em organização de código, uso adequado dos recursos do Laravel, separação de responsabilidades e preparação para execução em ambiente Docker.
 
-## Funcionalidades :
+## Todas as Funcionalidades do Projeto :
 
 - Cadastro e autenticação de usuários com Laravel Breeze.
 - Login e logout.
