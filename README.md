@@ -42,8 +42,7 @@ O projeto foi desenvolvido como aplicação de portfólio profissional, com foco
 - PHP
 - Laravel 
 - MySQL
-- Docker
-- Docker Compose
+- Docker & Docker Compose
 - Apache
 - Composer
 - Node.js
