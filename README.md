@@ -265,7 +265,3 @@ Link: https://meu-saldo-certo-9o9r.onrender.com
 - Portfólio: [portfolionatan.vercel.app](https://portfolionatan.vercel.app/)
   
 - E-mail: [natandaluz01@gmail.com](mailto:natandaluz01@gmail.com)
-
-## Licença
-
-Este projeto está licenciado sob a licença MIT.
