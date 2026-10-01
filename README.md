@@ -122,7 +122,7 @@ QUEUE_CONNECTION=database
 docker compose up -d --build
 ```
 
-Esse comando cria e inicia:
+O comando cria e inicia:
 
 - container Laravel + Apache + PHP;
 - container MySQL 8;
