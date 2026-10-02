@@ -1,6 +1,6 @@
 ## MEU SALDO CERTO 
 
-Sistema Web para controle financeiro pessoal desenvolvido em Laravel, permitindo o gerenciamento de receitas, despesas, categorias e acompanhamento financeiro por meio de dashboard com gráficos dentre novas funcionalidades conforme vão sendo desenvolvidas e atualizadas no projeto
+É um sistema Web para controle financeiro pessoal desenvolvido em Laravel, permitindo o gerenciamento de receitas, despesas, categorias e acompanhamento financeiro por meio de dashboard com gráficos dentre novas funcionalidades conforme vão sendo desenvolvidas e atualizadas no projeto
 
 <p align="center">
   Um Sistema Financeiro para gerenciamento de receitas, despesas, categorias e saldo por usuário autenticado, simples prático e rápido sem enrolação !
