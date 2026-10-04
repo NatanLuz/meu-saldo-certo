@@ -15,9 +15,7 @@
 
 ## Sobre o Projeto
 
-O **Meu Saldo Certo** é uma aplicação web para controle financeiro pessoal. O sistema permite registrar movimentações financeiras, classificar receitas e despesas por categorias, acompanhar o saldo atual e visualizar dados consolidados em um dashboard.
-
-O projeto foi desenvolvido como aplicação de portfólio profissional, com foco em organização de código, uso adequado dos recursos do Laravel, separação de responsabilidades e preparação para execução em ambiente Docker.
+O **Meu Saldo Certo** é uma aplicação web para controle financeiro pessoal. O sistema permite registrar movimentações financeiras, classificar receitas e despesas por categorias, acompanhar o saldo atual e visualizar dados consolidados em um dashboard. O projeto foi desenvolvido como aplicação de portfólio profissional, com foco em organização de código, uso adequado dos recursos do Laravel, separação de responsabilidades e preparação para execução em ambiente Docker.
 
 ## Todas as Funcionalidades do Projeto :
 
