@@ -51,7 +51,7 @@ O **Meu Saldo Certo** é uma aplicação web para controle financeiro pessoal. O
 
 ## Arquitetura do Projeto
 
-O projeto utiliza a arquitetura em MVC do própio Laravel, separando responsabilidades entre rotas, controllers, models, views, requests, policies e migrations.
+O projeto utiliza a arquitetura MVC do própio Laravel, separando responsabilidades entre rotas, controllers, models, views, requests, policies e migrations.
 
 ![Arquitetura do Projeto](screenshots/Arquiteturaprojeto.png)
 
