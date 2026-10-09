@@ -72,14 +72,14 @@ O projeto utiliza a arquitetura MVC do própio Laravel, separando responsabilida
 - Docker Compose  
 - Git
 
-### 1. Clonar o Projeto
+## 1. Clonar o Projeto
 
 ```bash
 git clone https://github.com/NatanLuz/meu-saldo-certo.git
 cd meu-saldo-certo
 ```
 
-### 2. Configurar o Arquivo `.env`
+## 2. Configurar o Arquivo `.env`
 
 Copie o arquivo de exemplo:
 
