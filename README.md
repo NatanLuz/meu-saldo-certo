@@ -1,9 +1,9 @@
-## MEU SALDO CERTO 
+## MEU SALDO CERTO
 
-Sistema Web para controle financeiro pessoal desenvolvido em Laravel, permitindo o gerenciamento de receitas, despesas, categorias e acompanhamento financeiro por meio de dashboard com gráficos dentre novas funcionalidades conforme vão sendo desenvolvidas e atualizadas no projeto
+Web system for personal financial management developed with Laravel, allowing users to manage income, expenses, categories, and financial activity through a dashboard with charts, along with new features as the project continues to evolve and receive updates.
 
 <p align="center">
-  Um Sistema Financeiro para gerenciamento de receitas, despesas, categorias e saldo por usuário autenticado, simples prático e rápido sem enrolação !
+  A financial system for managing income, expenses, categories, and balance for authenticated users — simple, practical, and fast, with no unnecessary complexity!
 </p>
 
 <p align="center">
@@ -13,31 +13,31 @@ Sistema Web para controle financeiro pessoal desenvolvido em Laravel, permitindo
   <img alt="Docker" src="https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white">
 </p>
 
-## Sobre o Projeto
+## About the Project
 
-O **Meu Saldo Certo** é uma aplicação web para controle financeiro pessoal. O sistema permite registrar movimentações financeiras, classificar receitas e despesas por categorias, acompanhar o saldo atual e visualizar dados consolidados em um dashboard. O projeto foi desenvolvido como aplicação de portfólio profissional, com foco em organização de código, uso adequado dos recursos do Laravel, separação de responsabilidades e preparação para execução em ambiente Docker.
+**Meu Saldo Certo** is a web application for personal financial management. The system allows users to record financial transactions, classify income and expenses by category, track the current balance, and view consolidated data on a dashboard. The project was developed as a professional portfolio application, focusing on code organization, proper use of Laravel resources, separation of responsibilities, and preparation for execution in a Docker environment.
 
-## Todas as Funcionalidades do Projeto :
+## Project Features
 
-- Cadastro e autenticação de usuários com Laravel Breeze.
-- Login e logout.
-- Dashboard financeiro.
-- Visualização de receitas, despesas e saldo atual.
-- Gráficos financeiros utilizando Chart.js.
-- CRUD de receitas.
-- CRUD de despesas.
-- Cadastro de categorias associadas às movimentações.
-- Filtros por período.
-- Paginação.
-- Validação com Form Requests.
-- Autorização com Policies.
-- Separação de dados por usuário autenticado.
-- Modelagem de banco de dados relacional.
+- User registration and authentication with Laravel Breeze.
+- Login and logout.
+- Financial dashboard.
+- Display of income, expenses, and current balance.
+- Financial charts using Chart.js.
+- Income CRUD.
+- Expense CRUD.
+- Category registration associated with transactions.
+- Date-range filters.
+- Pagination.
+- Validation with Form Requests.
+- Authorization with Policies.
+- Data separation by authenticated user.
+- Relational database modeling.
 
-## Stack Utilizada no Meu Saldo Certo
+## Stack Used in Meu Saldo Certo
 
 - PHP
-- Laravel 
+- Laravel
 - MySQL
 - Docker & Docker Compose
 - Apache
@@ -49,39 +49,39 @@ O **Meu Saldo Certo** é uma aplicação web para controle financeiro pessoal. O
 - JavaScript
 - Chart.js
 
-## Arquitetura do Projeto
+## Project Architecture
 
-O projeto utiliza a arquitetura MVC do própio Laravel, separando responsabilidades entre rotas, controllers, models, views, requests, policies e migrations.
+The project uses Laravel's own MVC architecture, separating responsibilities among routes, controllers, models, views, requests, policies, and migrations.
 
-![Arquitetura do Projeto](screenshots/Arquiteturaprojeto.png)
+![Project Architecture](screenshots/Arquiteturaprojeto.png)
 
-## Organização Técnica do Projeto
+## Technical Project Organization
 
-- `app/Http/Controllers`: controllers responsáveis pelos fluxos web.
-- `app/Http/Requests`: validações centralizadas com Form Requests.
-- `app/Models`: entidades principais da aplicação.
-- `app/Policies`: regras de autorização por usuário.
-- `database/migrations`: estrutura relacional do banco de dados.
-- `resources/views`: telas Blade da aplicação.
-- `resources/js` e `resources/css`: assets compilados pelo Vite.
-- `routes/web.php`: definição das rotas web protegidas por autenticação.
+- `app/Http/Controllers`: controllers responsible for web flows.
+- `app/Http/Requests`: centralized validation with Form Requests.
+- `app/Models`: main application entities.
+- `app/Policies`: user authorization rules.
+- `database/migrations`: relational database structure.
+- `resources/views`: application Blade screens.
+- `resources/js` and `resources/css`: assets compiled by Vite.
+- `routes/web.php`: definition of web routes protected by authentication.
 
-## Pré-Requisitos para o projeto (recomendo para execução e teste na sua máquina)
+## Project Prerequisites
 
 - Docker
-- Docker Compose  
+- Docker Compose
 - Git
 
-## 1. Clonar o Projeto
+## 1. Clone the Project
 
 ```bash
 git clone https://github.com/NatanLuz/meu-saldo-certo.git
 cd meu-saldo-certo
 ```
 
-## 2. Configurar o Arquivo `.env`
+## 2. Configure the `.env` File
 
-Copie o arquivo de exemplo:
+Copy the example file:
 
 ```bash
 cp .env.example .env
@@ -93,7 +93,7 @@ Windows PowerShell:
 Copy-Item .env.example .env
 ```
 
-Para executar com Docker Compose, configure o banco usando o nome do serviço MySQL:
+To run with Docker Compose, configure the database using the MySQL service name:
 
 ```env
 DB_CONNECTION=mysql
@@ -104,7 +104,7 @@ DB_USERNAME=meu_saldo_certo
 DB_PASSWORD=secret
 ```
 
-Também é recomendado manter:
+It is also recommended to keep:
 
 ```env
 SESSION_DRIVER=database
@@ -112,50 +112,50 @@ CACHE_STORE=database
 QUEUE_CONNECTION=database
 ```
 
-### 3. Subir os Containers
+### 3. Start the Containers
 
 ```bash
 docker compose up -d --build
 ```
 
-O comando cria e inicia:
+The command creates and starts:
 
-- container Laravel + Apache + PHP;
-- container MySQL 8;
-- volume persistente para o banco;
-- rede interna para comunicação entre aplicação e banco.
+- Laravel + Apache + PHP container;
+- MySQL 8 container;
+- persistent volume for the database;
+- internal network for communication between the application and database.
 
-### 4. Executar as Migrations do projeto
+### 4. Run the Project Migrations
 
 ```bash
 docker compose exec app php artisan migrate
 ```
 
-### 5. Criar Link de Storage, se necessário
+### 5. Create the Storage Link, if necessary
 
 ```bash
 docker compose exec app php artisan storage:link
 ```
 
-### 6. Criar Usuário Inicial
+### 6. Create the Initial User
 
-O cadastro pode ser feito pela própria tela da aplicação acessando o link.
+Registration can be completed through the application screen by accessing the link.
 
-Caso seja necessário criar um usuário de teste pelo terminal, o projeto possui o comando:
+If it is necessary to create a test user through the terminal, the project provides the following command:
 
 ```bash
 docker compose exec app php artisan make:test-user
 ```
 
-### 7. Acessar a Aplicação
+### 7. Access the Application
 
 ```text
 http://localhost:8000
 ```
 
-## Variáveis de Ambiente
+## Environment Variables
 
-Principais variáveis utilizadas para conexão com o MySQL:
+Main variables used to connect to MySQL:
 
 ```env
 DB_CONNECTION=mysql
@@ -166,41 +166,41 @@ DB_USERNAME=meu_saldo_certo
 DB_PASSWORD=secret
 ```
 
-Descrição:
+Description:
 
-- `DB_CONNECTION`: driver de banco utilizado pelo Laravel.
-- `DB_HOST`: host do banco. No Docker Compose, deve ser o nome do serviço `mysql`.
-- `DB_PORT`: porta interna do MySQL no container.
-- `DB_DATABASE`: nome do banco de dados da aplicação.
-- `DB_USERNAME`: usuário utilizado pela aplicação.
-- `DB_PASSWORD`: senha do usuário da aplicação.
+- `DB_CONNECTION`: database driver used by Laravel.
+- `DB_HOST`: database host. In Docker Compose, it must be the `mysql` service name.
+- `DB_PORT`: internal MySQL port in the container.
+- `DB_DATABASE`: application database name.
+- `DB_USERNAME`: user used by the application.
+- `DB_PASSWORD`: application user's password.
 
-Em produção, esses valores devem ser definidos no provedor de hospedagem, sem versionar credenciais reais no repositório.
+In production, these values should be defined by the hosting provider without committing real credentials to the repository.
 
-# Segurança e Boas Práticas
+# Security and Best Practices
 
-- Autenticação implementada com Laravel Breeze.
-- Rotas principais protegidas por autenticação.
-- Validação de entrada centralizada com Form Requests.
-- Policies utilizadas para autorização de acesso às transações.
-- Separação de dados por usuário autenticado.
-- Uso de variáveis de ambiente para configurações sensíveis.
-- Senhas armazenadas com hash pelo mecanismo padrão do Laravel.
-- Views Blade com escape automático de saída.
-- Banco de dados relacional com chaves estrangeiras e migrations versionadas.
-- Ambiente Docker separado em containers de aplicação e banco.
+- Authentication implemented with Laravel Breeze.
+- Main routes protected by authentication.
+- Centralized input validation with Form Requests.
+- Policies used to authorize access to transactions.
+- Data separation by authenticated user.
+- Environment variables used for sensitive configuration.
+- Passwords stored using Laravel's default hashing mechanism.
+- Blade views with automatic output escaping.
+- Relational database with foreign keys and versioned migrations.
+- Docker environment separated into application and database containers.
 
-## Testes
+## Tests
 
-O projeto está preparado para execução de testes automatizados com PHPUnit.
+The project is prepared for automated testing with PHPUnit.
 
-Para executar a suíte de testes:
+To run the test suite:
 
 ```bash
 php artisan test
 ```
 
-Em ambiente Docker:
+In a Docker environment:
 
 ```bash
 docker compose exec app php artisan test
@@ -210,54 +210,48 @@ docker compose exec app php artisan test
 
 ## Login
 
-![Tela de login](screenshots/login.png)
+![Login screen](screenshots/login.png)
 
 ## Dashboard
 
-![Dashboard financeiro](screenshots/dashboard.png)
+![Financial dashboard](screenshots/dashboard.png)
 
-## Transações
+## Transactions
 
-![Listagem de transações](screenshots/transacoes.png)
+![Transaction listing](screenshots/transacoes.png)
 
-## Nova Transação
+## New Transaction
 
-![Formulário de nova transação](screenshots/nova-transacao.png)
+![New transaction form](screenshots/nova-transacao.png)
 
-## Perfil
+## Profile
 
-![Tela de perfil](screenshots/perfil.png)
+![Profile screen](screenshots/perfil.png)
 
-## Arquitetura do Projeto
+## Project Architecture
 
-![Arquitetura do Projeto](screenshots/Arquiteturaprojeto.png)
+![Project Architecture](screenshots/Arquiteturaprojeto.png)
 
-## Versão Atual
+## Current Version
 
 **v1.1.0**
 
-Mudanças desta versão:
+Changes in this version:
 
-- Dockerização completa.
+- Complete Dockerization.
+- Docker Compose configuration.
+- Containerized MySQL.
+- Preparation for a production environment.
+- Improvements to the Laravel configuration for MySQL use.
 
-- Configuração com Docker Compose.
-
-- MySQL containerizado.
-
-- Preparação para ambiente de produção.
-
-- Melhorias na configuração Laravel para uso com MySQL.
-
-## Deploy
+## Deployment
 
 Link: https://meu-saldo-certo-9o9r.onrender.com
 
-## 👤 Autor
+## 👤 Author
 
 **Natan Da Luz**
 
 - LinkedIn: [linkedin.com/in/natandaluz](https://www.linkedin.com/in/natandaluz/)
-  
-- Portfólio: [portfolionatan.vercel.app](https://portfolionatan.vercel.app/)
-  
+- Portfolio: [portfolionatan.vercel.app](https://portfolionatan.vercel.app/)
 - E-mail: [natandaluz01@gmail.com](mailto:natandaluz01@gmail.com)
