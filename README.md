@@ -1,6 +1,6 @@
 # Store Management System | ShoppingCenter
 
-## 📖 About the Project
+## About this Project
 
 The **Store Management System - ShoppingCenter** is a console-based Java application that represents and manages the stores and products of a shopping center.
 
